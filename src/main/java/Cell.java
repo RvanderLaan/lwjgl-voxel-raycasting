@@ -12,7 +12,7 @@ import javax.xml.soap.Node;
 public class Cell {
 
     private static byte[] EMPTY_DATA = new byte[] {
-            0, 0, 0, 0
+            Byte.MIN_VALUE, Byte.MIN_VALUE, Byte.MIN_VALUE, Byte.MIN_VALUE
     };
 
     private Cell(byte[] data) {
@@ -63,7 +63,7 @@ public class Cell {
     }
 
     static byte float8ToByte(float f) {
-        return (byte) (f * 256 - Byte.MIN_VALUE);
+        return (byte) ((int) (f * 255f) - Byte.MIN_VALUE);
     }
 
     public static Cell createEmpty() {
@@ -72,18 +72,24 @@ public class Cell {
     public static Cell createData(Vector3f rgb) {
         byte[] data = {
                 float8ToByte(rgb.x),
-                float8ToByte(rgb.x),
-                float8ToByte(rgb.x),
+                float8ToByte(rgb.y),
+                float8ToByte(rgb.z),
                 NodeType.DATA.value
         };
         return new Cell(data);
     }
-    public static Cell createIndex(int index) {
+
+    /**
+     *
+     * @param index Index in the 3D texture
+     * @return
+     */
+    public static Cell createIndex(Vector3f index) {
         byte[] data = {
-                (byte) (index & 0xFF),
-                (byte) ((index >> 8) & 0xFF),
-                (byte) ((index >> 16) & 0xFF),
-                NodeType.DATA.value
+                float8ToByte(index.x),
+                float8ToByte(index.y),
+                float8ToByte(index.z),
+                NodeType.INDEX.value
         };
         return new Cell(data);
     }

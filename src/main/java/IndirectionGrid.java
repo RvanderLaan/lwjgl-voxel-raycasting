@@ -25,7 +25,7 @@ public class IndirectionGrid {
     }
 
     public void setNode(int index, Cell node) {
-        if (index >= 0 && index < 8) {
+        if (index < 0 || index >= 8) {
             System.err.println("Index out of bounds for IndirectionGrid insertion: " + index);
             return;
         }

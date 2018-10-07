@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
+import java.text.NumberFormat;
 
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
@@ -51,60 +52,43 @@ import static org.lwjgl.system.MemoryUtil.memAddress;
 
 public class Launcher {
 
-    /**
-     * The GLFW window handle.
-     */
+    /** The GLFW window handle. */
     private long window;
     private int width = 800;
     private int height = 600;
-    /**
-     * Whether we need to recreate our ray tracer framebuffer.
-     */
+    /**  Whether we need to recreate our ray tracer framebuffer. */
     private boolean resetFramebuffer = true;
 
-    /**
-     * The OpenGL texture acting as our framebuffer for the ray tracer.
-     */
+    /** The OpenGL texture acting as our framebuffer for the ray tracer. */
     private int tex;
-    /**
-     * A VAO simply holding a VBO for rendering a simple quad.
-     */
+    /** A VAO simply holding a VBO for rendering a simple quad. */
     private int vao;
-    /**
-     * The shader program handle of the compute shader.
-     */
+    /** The shader program handle of the compute shader. */
     private int computeProgram;
-    /**
-     * The shader program handle of a fullscreen quad shader.
-     */
+    /** The shader program handle of a fullscreen quad shader. */
     private int quadProgram;
-    /**
-     * A sampler object to sample the framebuffer texture when finally presenting it
-     * on the screen.
-     */
+    /** A sampler object to sample the framebuffer texture when finally presenting it
+     * on the screen. */
     private int sampler;
 
-    /**
-     * The location of the 'eye' uniform declared in the compute shader holding the
-     * world-space eye position.
-     */
+    /** The texture containing the voxelized data structure */
+    private int voxelTexture;
+    private int invVoxelTextureSizeUniform;
+    private float invVoxelTextureSize;
+
+    /** The location of the 'eye' uniform declared in the compute shader holding the
+     * world-space eye position. */
     private int eyeUniform;
-    /*
-     * The location of the rayNN uniforms. These will be explained later.
-     */
+    /** The location of the rayNN uniforms. These will be explained later. */
     private int ray00Uniform, ray10Uniform, ray01Uniform, ray11Uniform;
-    /**
-     * The binding point in the compute shader of the framebuffer image (level 0 of
-     * the {@link #tex} texture).
-     */
+
+    /** The binding point in the compute shader of the framebuffer image (level 0 of
+     * the {@link #tex} texture). */
     private int framebufferImageBinding;
-    /**
-     * Value of the work group size in X dimension declared in the compute shader.
-     */
+    private int voxelTextureUniform;
+    /** Value of the work group size in X dimension declared in the compute shader. */
     private int workGroupSizeX;
-    /**
-     * Value of the work group size in Y dimension declared in the compute shader.
-     */
+    /** Value of the work group size in Y dimension declared in the compute shader. */
     private int workGroupSizeY;
 
     private float mouseDownX;
@@ -137,9 +121,10 @@ public class Launcher {
      */
     private Callback debugProc;
 
-    /**
-     * Do everything necessary once at the start of the application.
-     */
+    public Launcher() {
+    }
+
+    /** Do everything necessary once at the start of the application. */
     private void init() throws IOException {
         /*
          * Set a GLFW error callback to be notified about any error messages GLFW
@@ -221,7 +206,7 @@ public class Launcher {
         GLFWVidMode vidmode = glfwGetVideoMode(glfwGetPrimaryMonitor());
         glfwSetWindowPos(window, (vidmode.width() - width) / 2, (vidmode.height() - height) / 2);
         glfwMakeContextCurrent(window);
-        glfwSwapInterval(0);
+        glfwSwapInterval(1);
         glfwShowWindow(window);
 
         /*
@@ -245,10 +230,20 @@ public class Launcher {
         initComputeProgram();
         createQuadProgram();
         initQuadProgram();
+        createVoxelTexture();
     }
 
-    /**
-     * Create a VAO with a full-screen quad VBO.
+    private void createVoxelTexture() {
+        SVO svo = new SVO(2, 100);
+        svo.generateDemoScene();
+        svo.generateSVO();
+        int textureSize = svo.getMaxTextureSize();
+        invVoxelTextureSize = 1 / (float) textureSize;
+//        System.out.println("textureSize + \", \" + invVoxelTextureSize = " + textureSize + ", " + invVoxelTextureSize);
+        voxelTexture = SVO.uploadTexture(textureSize, svo.getTextureData());
+    }
+
+    /** Create a VAO with a full-screen quad VBO.
      */
     private void quadFullScreenVao() {
         /*
@@ -274,8 +269,7 @@ public class Launcher {
         glBindVertexArray(0);
     }
 
-    /**
-     * Create the full-screen quad shader.
+    /** Create the full-screen quad shader.
      */
     private void createQuadProgram() throws IOException {
         /*
@@ -300,9 +294,7 @@ public class Launcher {
         this.quadProgram = program;
     }
 
-    /**
-     * Create the tracing compute shader program.
-     */
+    /** Create the tracing compute shader program. */
     private void createComputeProgram() throws IOException {
         /*
          * Create our GLSL compute shader. It does not look any different to creating a
@@ -325,10 +317,8 @@ public class Launcher {
         this.computeProgram = program;
     }
 
-    /**
-     * Initialize the full-screen-quad program. This just binds the program briefly
-     * to obtain the uniform locations.
-     */
+    /** Initialize the full-screen-quad program. This just binds the program briefly
+     * to obtain the uniform locations. */
     private void initQuadProgram() {
         glUseProgram(quadProgram);
         int texUniform = glGetUniformLocation(quadProgram, "tex");
@@ -336,11 +326,9 @@ public class Launcher {
         glUseProgram(0);
     }
 
-    /**
-     * Initialize the compute shader. This just binds the program briefly to obtain
+    /** Initialize the compute shader. This just binds the program briefly to obtain
      * the uniform locations, the declared work group size values and the image
-     * binding point of the framebuffer image.
-     */
+     * binding point of the framebuffer image. */
     private void initComputeProgram() {
         glUseProgram(computeProgram);
         IntBuffer workGroupSize = BufferUtils.createIntBuffer(3);
@@ -359,11 +347,17 @@ public class Launcher {
         glGetUniformiv(computeProgram, loc, params);
         framebufferImageBinding = params.get(0);
 
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_3D, voxelTexture);
+
+        voxelTextureUniform = glGetUniformLocation(computeProgram, "voxelTexture");
+
+        invVoxelTextureSizeUniform = glGetUniformLocation(computeProgram, "invVoxelTextureSize");
+
         glUseProgram(0);
     }
 
-    /**
-     * Create the texture that will serve as our framebuffer that the compute shader
+    /** Create the texture that will serve as our framebuffer that the compute shader
      * will write/render to.
      */
     private void createFramebufferTexture() {
@@ -378,8 +372,7 @@ public class Launcher {
         glBindTexture(GL_TEXTURE_2D, 0);
     }
 
-    /**
-     * Create the sampler to sample the framebuffer texture within the fullscreen
+    /** Create the sampler to sample the framebuffer texture within the fullscreen
      * quad shader. We use NEAREST filtering since one texel on the framebuffer
      * texture corresponds exactly to one pixel on the GLFW window framebuffer.
      */
@@ -389,32 +382,30 @@ public class Launcher {
         glSamplerParameteri(this.sampler, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     }
 
-    /**
-     * Recreate the framebuffer when the window size changes.
+    /** Recreate the framebuffer when the window size changes.
      */
     private void resizeFramebufferTexture() {
         glDeleteTextures(tex);
         createFramebufferTexture();
     }
 
-    /**
-     * Compute one frame by tracing the scene using our compute shader.
+    /** Compute one frame by tracing the scene using our compute shader.
      * The resulting pixels will be written to the framebuffer texture {@link #tex}.
      */
     private void trace() {
         glUseProgram(computeProgram);
 
         if (mouseDown) {
-            /*
-             * If mouse is down, compute the camera rotation based on mouse cursor location.
-             */
+            // If mouse is down, compute the camera rotation based on mouse cursor location.
             currRotationAboutY = rotationAboutY + (mouseX - mouseDownX) * 0.01f;
+            System.out.println("cameraPosition = " + cameraPosition.toString(NumberFormat.getPercentInstance()));
         } else {
             currRotationAboutY = rotationAboutY;
         }
 
         /* Rotate camera about Y axis. */
-        cameraPosition.set((float) sin(-currRotationAboutY) * 3.0f, 2.0f, (float) cos(-currRotationAboutY) * 3.0f);
+        cameraPosition.set((float) sin(-currRotationAboutY) * 3.0f, 2.0f, (float) cos(-currRotationAboutY) * 3.0f)
+            .normalize();
         viewMatrix.setLookAt(cameraPosition, cameraLookAt, cameraUp);
 
         /*
@@ -448,12 +439,18 @@ public class Launcher {
         invViewProjMatrix.transformProject(tmpVector.set(1, 1, 0)).sub(cameraPosition);
         glUniform3f(ray11Uniform, tmpVector.x, tmpVector.y, tmpVector.z);
 
+        // Set voxel texture size
+        glUniform1f(invVoxelTextureSizeUniform, invVoxelTextureSize);
+        // Set voxel texture location (TEXTURE0)
+        glUniform1i(voxelTextureUniform, 0);
+
         /*
          * Bind level 0 of framebuffer texture as writable image in the shader. This
          * tells OpenGL that any writes to the image defined in our shader is going to
          * go to the first level of the texture 'tex'.
          */
         glBindImageTexture(framebufferImageBinding, tex, 0, false, 0, GL_WRITE_ONLY, GL_RGBA32F);
+
 
         /*
          * Compute appropriate global work size dimensions. Because OpenGL only allows
@@ -479,9 +476,7 @@ public class Launcher {
         glUseProgram(0);
     }
 
-    /**
-     * Present the final image on the default framebuffer of the GLFW window.
-     */
+    /** Present the final image on the default framebuffer of the GLFW window. */
     private void present() {
         /*
          * Draw the rendered image on the screen using a textured full-screen quad.
@@ -490,6 +485,7 @@ public class Launcher {
         glBindVertexArray(vao);
         glBindTexture(GL_TEXTURE_2D, tex);
         glBindSampler(0, this.sampler);
+//        glBindTexture(GL_TEXTURE_3D, voxelTexture);
         glDrawArrays(GL_TRIANGLES, 0, 6);
         glBindSampler(0, 0);
         glBindTexture(GL_TEXTURE_2D, 0);
@@ -498,32 +494,20 @@ public class Launcher {
     }
 
     private void loop() {
-        /*
-         * Our render loop is really simple...
-         */
+        // Our render loop is really simple...
         while (!glfwWindowShouldClose(window)) {
-            /*
-             * ...we just poll for GLFW window events (as usual).
-             */
+            // ...we just poll for GLFW window events (as usual).
             glfwPollEvents();
-            /*
-             * Tell OpenGL about any possibly modified viewport size.
-             */
+            // Tell OpenGL about any possibly modified viewport size.
             glViewport(0, 0, width, height);
-            /*
-             * Call the compute shader to trace the scene and produce an image in our
-             * framebuffer texture.
-             */
+            // Call the compute shader to trace the scene and produce an image in our
+            // framebuffer texture.
             trace();
-            /*
-             * Finally we blit/render the framebuffer texture to the default window
-             * framebuffer of the GLFW window.
-             */
+            // Finally we blit/render the framebuffer texture to the default window
+            // framebuffer of the GLFW window.
             present();
-            /*
-             * Tell the GLFW window to swap buffers so that our rendered framebuffer texture
-             * becomes visible.
-             */
+            // Tell the GLFW window to swap buffers so that our rendered framebuffer texture
+            // becomes visible.
             glfwSwapBuffers(window);
         }
     }

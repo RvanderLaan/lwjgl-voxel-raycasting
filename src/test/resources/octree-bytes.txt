@@ -1,0 +1,82 @@
+INDEX	INDEX	INDEX	INDEX	INDEX	INDEX	INDEX	INDEX	
+EMPTY	EMPTY	EMPTY	DATA	EMPTY	DATA	DATA	DATA	
+EMPTY	EMPTY	DATA	EMPTY	DATA	EMPTY	DATA	DATA	
+EMPTY	DATA	EMPTY	EMPTY	DATA	DATA	EMPTY	DATA	
+DATA	EMPTY	EMPTY	EMPTY	DATA	DATA	DATA	EMPTY	
+EMPTY	DATA	DATA	DATA	EMPTY	EMPTY	EMPTY	DATA	
+DATA	EMPTY	DATA	DATA	EMPTY	EMPTY	DATA	EMPTY	
+DATA	DATA	EMPTY	DATA	EMPTY	DATA	EMPTY	EMPTY	
+DATA	DATA	DATA	EMPTY	DATA	EMPTY	EMPTY	EMPTY	
+
+63   	0   	0   	255   	
+127   	63   	0   	255   	
+191   	63   	0   	255   	
+0   	127   	63   	255   	
+63   	127   	63   	255   	
+127   	191   	63   	255   	
+191   	191   	63   	255   	
+0   	0   	127   	255   	
+0   	0   	0   	0   	
+0   	0   	0   	0   	
+0   	0   	0   	0   	
+255   	0   	255   	128   	
+0   	0   	0   	0   	
+255   	0   	255   	128   	
+255   	0   	255   	128   	
+255   	0   	255   	128   	
+0   	0   	0   	0   	
+0   	0   	0   	0   	
+255   	0   	255   	128   	
+0   	0   	0   	0   	
+255   	0   	255   	128   	
+0   	0   	0   	0   	
+255   	0   	255   	128   	
+255   	0   	255   	128   	
+0   	0   	0   	0   	
+255   	0   	255   	128   	
+0   	0   	0   	0   	
+0   	0   	0   	0   	
+255   	0   	255   	128   	
+255   	0   	255   	128   	
+0   	0   	0   	0   	
+255   	0   	255   	128   	
+255   	0   	255   	128   	
+0   	0   	0   	0   	
+0   	0   	0   	0   	
+0   	0   	0   	0   	
+255   	0   	255   	128   	
+255   	0   	255   	128   	
+255   	0   	255   	128   	
+0   	0   	0   	0   	
+0   	0   	0   	0   	
+255   	0   	255   	128   	
+255   	0   	255   	128   	
+255   	0   	255   	128   	
+0   	0   	0   	0   	
+0   	0   	0   	0   	
+0   	0   	0   	0   	
+255   	0   	255   	128   	
+255   	0   	255   	128   	
+0   	0   	0   	0   	
+255   	0   	255   	128   	
+255   	0   	255   	128   	
+0   	0   	0   	0   	
+0   	0   	0   	0   	
+255   	0   	255   	128   	
+0   	0   	0   	0   	
+255   	0   	255   	128   	
+255   	0   	255   	128   	
+0   	0   	0   	0   	
+255   	0   	255   	128   	
+0   	0   	0   	0   	
+255   	0   	255   	128   	
+0   	0   	0   	0   	
+0   	0   	0   	0   	
+255   	0   	255   	128   	
+255   	0   	255   	128   	
+255   	0   	255   	128   	
+0   	0   	0   	0   	
+255   	0   	255   	128   	
+0   	0   	0   	0   	
+0   	0   	0   	0   	
+0   	0   	0   	0   	

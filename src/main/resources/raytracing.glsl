@@ -9,6 +9,8 @@
  */
 layout(binding = 0, rgba32f) uniform image2D framebufferImage;
 
+uniform sampler3D voxelTexture;
+
 /**
  * Describes the view frustum of the camera via its world-space corner
  * edge vectors which we perform bilinear interpolation on to get the
@@ -17,9 +19,13 @@ layout(binding = 0, rgba32f) uniform image2D framebufferImage;
  */
 uniform vec3 eye, ray00, ray01, ray10, ray11;
 
+uniform float invVoxelTextureSize;
+
 #define LARGE_FLOAT 1E+10
 #define NUM_BOXES 10
 #define EPSILON 0.0001
+#define HRDWTREE_MAX_DEPTH 16
+
 
 /**
  * Describes an axis-aligned box by its minimum and maximum corner
@@ -99,6 +105,33 @@ bool intersectBoxes(vec3 origin, vec3 dir, out hitinfo info) {
   return found;
 }
 
+
+vec3 treeLookup(vec3 m) {
+    vec4 cell = vec4(0.0, 0.0, 0.0, 0.0);
+    vec3 mnd = m;
+    vec3 p;
+
+    for (float i = 0; i < HRDWTREE_MAX_DEPTH; i++) { // fixed # of iterations
+        // already in a leaf?
+        if (cell.w < 0.9) {
+            // compute lookup coords. within current node
+            p = mnd + cell.xyz;
+            // continue to next depth
+            cell = texture3D(voxelTexture, p);
+        }
+
+        if (cell.w > 0.9)    // a leaf has been reached
+            break;
+
+        if (cell.w < 0.1) // empty cell
+            return vec3(0);
+
+        // compute pos within next depth grid
+        mnd = mnd * 2;
+    }
+    return cell.xyz;
+}
+
 /**
  * Given the ray `origin + t * dir` trace it through the scene,
  * checking for the nearest collision with any of the above defined
@@ -109,6 +142,13 @@ bool intersectBoxes(vec3 origin, vec3 dir, out hitinfo info) {
  * @returns the computed color
  */
 vec3 trace(vec3 origin, vec3 dir) {
+    for (float i = 0.0; i < 1; i += 0.05) {
+        vec3 color = treeLookup(origin + dir * i);
+        if (color != vec3(0))
+            return color;
+    }
+    return vec3(0);
+
   hitinfo hinfo;
   /* Intersect the ray with all boxes */
   if (!intersectBoxes(origin, dir, hinfo))
@@ -123,7 +163,11 @@ vec3 trace(vec3 origin, vec3 dir) {
    * just allow us to visually differentiate the boxes.
    */
   return vec3(float(hinfo.i+1) / NUM_BOXES);
+//    return texture3D(voxelTexture, origin * 10).rgb;
 }
+
+
+
 
 layout (local_size_x = 16, local_size_y = 16) in;
 
@@ -177,6 +221,8 @@ void main(void) {
    * item's framebuffer pixel.
    */
   vec3 color = trace(eye, normalize(dir));
+//    vec3 color = texture3D(voxelTexture, vec3(eye.x, 0, 0)).rgb;
+
   /*
    * Store the final color in the framebuffer's pixel of the current
    * work item.

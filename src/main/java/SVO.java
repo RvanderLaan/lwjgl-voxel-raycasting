@@ -12,8 +12,11 @@ import java.util.ArrayList;
  */
 public class SVO {
 
+    @Getter
     private ArrayList<IndirectionGrid> indirectionPool;
+    @Getter
     private int maxDepth;
+    @Getter
     private int worldSize;
 
     @Getter
@@ -58,6 +61,7 @@ public class SVO {
     protected void createNode(int depth, Vector3f boxStart) {
         IndirectionGrid ig = new IndirectionGrid();
         indirectionPool.add(ig);
+        int maxTextureSize = getMaxTextureSize();
 
         // The size of a child box is worldSize / 2^D, e.g. 1 -> 0.5 -> 0.25 -> 0.125 -> ...
         float childBoxSize = worldSize / (float) Math.pow(2, depth + 1);
@@ -73,11 +77,18 @@ public class SVO {
                     .findFirst()
                     .orElse(null);
 
-            if (depth != maxDepth) {
+            // Todo: Should it be + 1 or not?
+            if (depth + 1 != maxDepth) {
                 // If not at max depth, check whether the child node should be subdivided
                 if (intersection != null) {
+                    int listIndex = indirectionPool.size();
+                    Vector3f textureIndex = new Vector3f(
+                            listIndex % maxTextureSize,
+                            (listIndex / 2) % maxTextureSize,
+                            (listIndex / 4) % maxTextureSize
+                    ).mul(1 / (float) maxTextureSize);
                     // Create a link from the child node to the next indirection grid
-                    ig.setNode(i, Cell.createIndex(indirectionPool.size()));
+                    ig.setNode(i, Cell.createIndex(textureIndex));
                     // Subdivide the child node: Add a new intersection grid
                     createNode(depth + 1, childBoxStart);
                 }
@@ -93,13 +104,28 @@ public class SVO {
     }
 
     public int getMaxTextureSize() {
-        return (int) Math.pow(2, maxDepth);
+        int minTextureSize = (int) Math.ceil(Math.pow(indirectionPool.size() * 8 * 4, 1/3f));
+        return nextPowerOfTwo(minTextureSize);
+    }
+
+    private static int nextPowerOfTwo(int value) {
+        int highestOneBit = Integer.highestOneBit(value);
+        if (value == highestOneBit) {
+            return value;
+        }
+        return highestOneBit << 1;
     }
 
     public ByteBuffer getTextureData() {
+//        System.out.println("Generating texture...");
+        System.out.println("max depth: " + maxDepth + ", " + "indirectionPool size: " + indirectionPool.size());
+
+        int textureSize = getMaxTextureSize();
+        System.out.println("textureSize: " + textureSize + "^3 = " + (int) Math.pow(textureSize, 3));
+
         // In a worst case scenario, all octree nodes are used, so the tree is subdivided to maxDepth everywhere
-        int size = getMaxTextureSize();
-        ByteBuffer textureData = BufferUtils.createByteBuffer(size * size * size * 4); // 4 bytes since r g b a
+//        int size = getMaxTextureSize();
+        ByteBuffer textureData = BufferUtils.createByteBuffer(textureSize * textureSize * textureSize); // 4 bytes since r g b a
 
         for (IndirectionGrid ig : indirectionPool) {
             ig.get(textureData);
@@ -113,8 +139,8 @@ public class SVO {
 
         GL11.glEnable(GL12.GL_TEXTURE_3D);
         GL11.glBindTexture(GL12.GL_TEXTURE_3D, texID);
-        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_LINEAR);
-        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_LINEAR);
+        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_NEAREST);
+        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NEAREST);
         GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_WRAP_S, GL11.GL_REPEAT);
         GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_WRAP_T, GL11.GL_REPEAT);
         GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL12.GL_TEXTURE_WRAP_R, GL11.GL_REPEAT);
