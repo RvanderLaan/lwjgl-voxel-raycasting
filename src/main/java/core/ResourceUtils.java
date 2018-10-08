@@ -1,3 +1,5 @@
+package core;
+
 import org.joml.Vector3f;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.PointerBuffer;

@@ -1,3 +1,5 @@
+package core;
+
 import lombok.Getter;
 import org.joml.Vector3f;
 import org.lwjgl.BufferUtils;
@@ -35,7 +37,7 @@ public class SVO {
     }
 
     public void generateDemoScene() {
-        geometries.add(new Sphere(new Vector3f(worldSize / 2f), worldSize / 3f, new Vector3f(1, 0, 1)));
+        geometries.add(new Sphere(new Vector3f(worldSize / 2f), worldSize / 64f, new Vector3f(1, 0, 1)));
     }
 
     public void generateSVO() {
@@ -54,7 +56,7 @@ public class SVO {
     };
 
     /**
-     * Recursively creates nodes in the SVO from the specified geometries
+     * Recursively creates nodes in the core.SVO from the specified geometries
      * @param depth
      * @param boxStart
      */
@@ -125,10 +127,17 @@ public class SVO {
 
         // In a worst case scenario, all octree nodes are used, so the tree is subdivided to maxDepth everywhere
 //        int size = getMaxTextureSize();
-        ByteBuffer textureData = BufferUtils.createByteBuffer(textureSize * textureSize * textureSize); // 4 bytes since r g b a
+        ByteBuffer textureData = BufferUtils.createByteBuffer(textureSize * textureSize * textureSize * 4); // 4 bytes since r g b a
 
         for (IndirectionGrid ig : indirectionPool) {
             ig.get(textureData);
+        }
+
+//        indirectionPool.get(0).get(textureData);
+
+        // Pad left over texture space
+        while (textureData.hasRemaining()) {
+            textureData.putFloat(0);
         }
         textureData.flip();
         return textureData;
@@ -139,6 +148,8 @@ public class SVO {
 
         GL11.glEnable(GL12.GL_TEXTURE_3D);
         GL11.glBindTexture(GL12.GL_TEXTURE_3D, texID);
+//        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_LINEAR);
+//        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_LINEAR);
         GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_NEAREST);
         GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NEAREST);
         GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_WRAP_S, GL11.GL_REPEAT);

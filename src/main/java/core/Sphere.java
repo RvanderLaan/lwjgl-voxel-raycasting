@@ -1,3 +1,5 @@
+package core;
+
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.joml.Vector3f;

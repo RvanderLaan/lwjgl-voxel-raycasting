@@ -1,3 +1,5 @@
+package core;
+
 import lombok.Getter;
 
 import java.nio.ByteBuffer;
@@ -26,7 +28,7 @@ public class IndirectionGrid {
 
     public void setNode(int index, Cell node) {
         if (index < 0 || index >= 8) {
-            System.err.println("Index out of bounds for IndirectionGrid insertion: " + index);
+            System.err.println("Index out of bounds for core.IndirectionGrid insertion: " + index);
             return;
         }
         children[index] = node;
@@ -34,7 +36,7 @@ public class IndirectionGrid {
 
     public void get(ByteBuffer buffer) {
         for (Cell cell : children) {
-            buffer.put(cell.getData());
+            cell.getData(buffer);
         }
     }
 }

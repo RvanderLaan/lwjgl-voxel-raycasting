@@ -1,3 +1,8 @@
+package core;
+
+import input.CursorHandler;
+import input.KeyboardHandler;
+import input.MouseButtonHandler;
 import org.joml.Matrix4f;
 import org.joml.Vector3f;
 import org.lwjgl.BufferUtils;
@@ -11,10 +16,9 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
+import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
-import static java.lang.Math.cos;
-import static java.lang.Math.sin;
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.glfw.GLFW.glfwDestroyWindow;
 import static org.lwjgl.glfw.GLFW.glfwTerminate;
@@ -91,29 +95,23 @@ public class Launcher {
     /** Value of the work group size in Y dimension declared in the compute shader. */
     private int workGroupSizeY;
 
-    private float mouseDownX;
-    private float mouseX;
-    private boolean mouseDown;
-    private float currRotationAboutY;
-    private float rotationAboutY;
-
     private Matrix4f projMatrix = new Matrix4f();
     private Matrix4f viewMatrix = new Matrix4f();
     private Matrix4f invViewProjMatrix = new Matrix4f();
     private Vector3f tmpVector = new Vector3f();
-    private Vector3f cameraPosition = new Vector3f();
-    private Vector3f cameraLookAt = new Vector3f(0.0f, 0.5f, 0.0f);
-    private Vector3f cameraUp = new Vector3f(0.0f, 1.0f, 0.0f);
+
+    private Camera camera;
+    private Controller controller;
 
     /*
      * All the GLFW callbacks we use to detect certain events, such as keyboard and
      * mouse events or window resize events.
      */
     private GLFWErrorCallback errCallback;
-    private GLFWKeyCallback keyCallback;
+    private KeyboardHandler keyCallback;
     private GLFWFramebufferSizeCallback fbCallback;
-    private GLFWCursorPosCallback cpCallback;
-    private GLFWMouseButtonCallback mbCallback;
+    private CursorHandler cpCallback;
+    private MouseButtonHandler mbCallback;
 
     /*
      * LWJGL's OpenGL debug callback object, which will get notified by OpenGL about
@@ -151,21 +149,13 @@ public class Launcher {
         /*
          * Now, create the window.
          */
-        window = glfwCreateWindow(width, height, "Path Tracing Tutorial 1", NULL, NULL);
+        window = glfwCreateWindow(width, height, "SVO Ray tracing", NULL, NULL);
         if (window == NULL)
             throw new AssertionError("Failed to create the GLFW window");
 
         /* And set some GLFW callbacks to get notified about events. */
 
-        glfwSetKeyCallback(window, keyCallback = new GLFWKeyCallback() {
-            public void invoke(long window, int key, int scancode, int action, int mods) {
-                if (action != GLFW_RELEASE)
-                    return;
-                if (key == GLFW_KEY_ESCAPE) {
-                    glfwSetWindowShouldClose(window, true);
-                }
-            }
-        });
+        glfwSetKeyCallback(window, keyCallback = new KeyboardHandler());
 
         /*
          * We need to get notified when the GLFW window framebuffer size changed (i.e.
@@ -182,23 +172,9 @@ public class Launcher {
             }
         });
 
-        glfwSetCursorPosCallback(window, cpCallback = new GLFWCursorPosCallback() {
-            public void invoke(long window, double x, double y) {
-                Launcher.this.mouseX = (float) x;
-            }
-        });
+        glfwSetCursorPosCallback(window, cpCallback = new CursorHandler());
 
-        glfwSetMouseButtonCallback(window, mbCallback = new GLFWMouseButtonCallback() {
-            public void invoke(long window, int button, int action, int mods) {
-                if (action == GLFW_PRESS) {
-                    Launcher.this.mouseDownX = Launcher.this.mouseX;
-                    Launcher.this.mouseDown = true;
-                } else if (action == GLFW_RELEASE) {
-                    Launcher.this.mouseDown = false;
-                    Launcher.this.rotationAboutY = Launcher.this.currRotationAboutY;
-                }
-            }
-        });
+        glfwSetMouseButtonCallback(window, mbCallback = new MouseButtonHandler());
 
         /*
          * Center the created GLFW window on the screen.
@@ -222,6 +198,9 @@ public class Launcher {
         GL.createCapabilities();
         debugProc = GLUtil.setupDebugMessageCallback();
 
+        camera = new Camera(new Vector3f(0.5f, 0.5f, 0.05f));
+        controller = new Controller(camera);
+
         /* Create all needed GL resources */
         createFramebufferTexture();
         createSampler();
@@ -241,6 +220,20 @@ public class Launcher {
         invVoxelTextureSize = 1 / (float) textureSize;
 //        System.out.println("textureSize + \", \" + invVoxelTextureSize = " + textureSize + ", " + invVoxelTextureSize);
         voxelTexture = SVO.uploadTexture(textureSize, svo.getTextureData());
+    }
+
+    private void update(float dt) {
+        if (KeyboardHandler.isKeyPressed(GLFW_KEY_ESCAPE)) {
+            glfwSetWindowShouldClose(window, true);
+        }
+
+        controller.update(dt);
+
+        KeyboardHandler.update();
+        MouseButtonHandler.update();
+
+        String camPosText = camera.getPosition().toString(new DecimalFormat("0.0"));
+        glfwSetWindowTitle(window, "SVO Ray tracing - CamPos: " + camPosText);
     }
 
     /** Create a VAO with a full-screen quad VBO.
@@ -395,18 +388,9 @@ public class Launcher {
     private void trace() {
         glUseProgram(computeProgram);
 
-        if (mouseDown) {
-            // If mouse is down, compute the camera rotation based on mouse cursor location.
-            currRotationAboutY = rotationAboutY + (mouseX - mouseDownX) * 0.01f;
-            System.out.println("cameraPosition = " + cameraPosition.toString(NumberFormat.getPercentInstance()));
-        } else {
-            currRotationAboutY = rotationAboutY;
-        }
-
         /* Rotate camera about Y axis. */
-        cameraPosition.set((float) sin(-currRotationAboutY) * 3.0f, 2.0f, (float) cos(-currRotationAboutY) * 3.0f)
-            .normalize();
-        viewMatrix.setLookAt(cameraPosition, cameraLookAt, cameraUp);
+//        cameraPosition.set((float) sin(-currRotationAboutY) * 3.0f, 2.0f, (float) cos(-currRotationAboutY) * 3.0f).normalize();
+        viewMatrix.set(camera.getRotation());
 
         /*
          * If the framebuffer size has changed, because the GLFW window was resized, we
@@ -429,14 +413,14 @@ public class Launcher {
          * compute the direction from the eye through a framebuffer's pixel center for a
          * given shader work item.
          */
-        glUniform3f(eyeUniform, cameraPosition.x, cameraPosition.y, cameraPosition.z);
-        invViewProjMatrix.transformProject(tmpVector.set(-1, -1, 0)).sub(cameraPosition);
+        glUniform3f(eyeUniform, camera.getPosition().x, camera.getPosition().y, camera.getPosition().z);
+        invViewProjMatrix.transformProject(tmpVector.set(-1, -1, 0)).sub(camera.getPosition());
         glUniform3f(ray00Uniform, tmpVector.x, tmpVector.y, tmpVector.z);
-        invViewProjMatrix.transformProject(tmpVector.set(-1, 1, 0)).sub(cameraPosition);
+        invViewProjMatrix.transformProject(tmpVector.set(-1, 1, 0)).sub(camera.getPosition());
         glUniform3f(ray01Uniform, tmpVector.x, tmpVector.y, tmpVector.z);
-        invViewProjMatrix.transformProject(tmpVector.set(1, -1, 0)).sub(cameraPosition);
+        invViewProjMatrix.transformProject(tmpVector.set(1, -1, 0)).sub(camera.getPosition());
         glUniform3f(ray10Uniform, tmpVector.x, tmpVector.y, tmpVector.z);
-        invViewProjMatrix.transformProject(tmpVector.set(1, 1, 0)).sub(cameraPosition);
+        invViewProjMatrix.transformProject(tmpVector.set(1, 1, 0)).sub(camera.getPosition());
         glUniform3f(ray11Uniform, tmpVector.x, tmpVector.y, tmpVector.z);
 
         // Set voxel texture size
@@ -485,7 +469,6 @@ public class Launcher {
         glBindVertexArray(vao);
         glBindTexture(GL_TEXTURE_2D, tex);
         glBindSampler(0, this.sampler);
-//        glBindTexture(GL_TEXTURE_3D, voxelTexture);
         glDrawArrays(GL_TRIANGLES, 0, 6);
         glBindSampler(0, 0);
         glBindTexture(GL_TEXTURE_2D, 0);
@@ -498,6 +481,9 @@ public class Launcher {
         while (!glfwWindowShouldClose(window)) {
             // ...we just poll for GLFW window events (as usual).
             glfwPollEvents();
+
+            update(1 / 60f); // todo: measure delta time
+
             // Tell OpenGL about any possibly modified viewport size.
             glViewport(0, 0, width, height);
             // Call the compute shader to trace the scene and produce an image in our

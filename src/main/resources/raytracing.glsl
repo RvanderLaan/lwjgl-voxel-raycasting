@@ -142,11 +142,30 @@ vec3 treeLookup(vec3 m) {
  * @returns the computed color
  */
 vec3 trace(vec3 origin, vec3 dir) {
-    for (float i = 0.0; i < 1; i += 0.05) {
-        vec3 color = treeLookup(origin + dir * i);
+    vec3 lookup = origin;
+
+    // Start lookup always at bounds of unit cube
+//    float distToUnitCube =
+//    lookup += dir *
+//    for (float i = 0;
+//        i < 1;
+//        i += 0.1) {
+//        lookup += dir * i;
+//
+//        if ((all(lessThan(lookup, vec3(1))) && all(greaterThanEqual(lookup, vec3(0)))))
+//            break;
+//    }
+
+    // Do several lookups along rays from the camera viewpoint
+    for (float i = 0.0;
+            all(lessThan(lookup, vec3(1))) && all(greaterThanEqual(lookup, vec3(0)));
+            i += 0.01) {
+        vec3 color = treeLookup(lookup);
         if (color != vec3(0))
             return color;
+        lookup += dir * i;
     }
+    // If no lookup succeeds, return a background color
     return vec3(0);
 
   hitinfo hinfo;
@@ -221,7 +240,10 @@ void main(void) {
    * item's framebuffer pixel.
    */
   vec3 color = trace(eye, normalize(dir));
-//    vec3 color = texture3D(voxelTexture, vec3(eye.x, 0, 0)).rgb;
+//    vec3 color = texture3D(voxelTexture, vec3(p, eye.x)).rgb;
+//    vec3 color = texture3D(voxelTexture, vec3(p, eye.x)).rgb;
+
+
 
   /*
    * Store the final color in the framebuffer's pixel of the current
