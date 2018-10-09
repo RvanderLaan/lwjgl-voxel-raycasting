@@ -7,6 +7,7 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
 import java.nio.ByteBuffer;
+import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 
@@ -38,7 +39,7 @@ public class SVO {
     }
 
     public void generateDemoScene() {
-        geometries.add(new Sphere(new Vector3f(worldSize / 2f), worldSize / 8f, new Vector3f(0.5f, 0.5f, 0.5f)));
+        geometries.add(new Sphere(new Vector3f(worldSize / 2f), worldSize / 16f, new Vector3f(0.5f, 0.5f, 0.5f)));
     }
 
     public void generateSVO() {
@@ -57,14 +58,36 @@ public class SVO {
     };
 
     /**
-     * Recursively creates nodes in the core.SVO from the specified geometries
+     * Every indirection grid is located in texture memory at a 2x2x2 cube, starting at 0, 0, 0
+     * @param indirectionGridIndex
+     * @return
+     */
+    protected Vector3f getTextureIndex(int indirectionGridIndex) {
+        int textureSize = getMaxTextureSize();
+        int halfTextureSize = textureSize / 2;
+        int i = indirectionGridIndex;
+        int x = (i % halfTextureSize) * 2;
+        int y = ((i / halfTextureSize) % halfTextureSize) * 2;
+        int z = ((i / (halfTextureSize * halfTextureSize))) * 2;
+        return new Vector3f(x, y, z).div((float) textureSize);
+    }
+
+    /**
+     * Recursively creates nodes in the core.SVO from the specified geometries.
+     *
+     * Algorithm: For each cell of this grid, check if in intersects with any geometry.
+     * If it does not, that cell can be marked as empty.
+     * If it does, two things can happen:
+     *      If at max depth, this cell becomes a data cell ,representing the color of the geometry
+     *      Else, the cell becomes a link to a new indirection grid that is located in this cell
+     *
      * @param depth
      * @param boxStart
      */
-    protected void createNode(int depth, Vector3f boxStart) {
+    protected int createNode(int depth, Vector3f boxStart) {
+        int currentIGIndex = indirectionPool.size();
         IndirectionGrid ig = new IndirectionGrid();
         indirectionPool.add(ig);
-        int maxTextureSize = getMaxTextureSize();
 
         // The size of a child box is worldSize / 2^D, e.g. 1 -> 0.5 -> 0.25 -> 0.125 -> ...
         float childBoxSize = worldSize / (float) Math.pow(2, depth + 1);
@@ -80,45 +103,39 @@ public class SVO {
                     .findFirst()
                     .orElse(null);
 
-            // Todo: Should it be + 1 or not?
             if (depth + 1 != maxDepth) {
                 // If not at max depth, check whether the child node should be subdivided
                 if (intersection != null) {
-                    int listIndex = indirectionPool.size() * 8; // 8 indices per indirection grid
-                    System.out.println("listIndex = " + listIndex);
-                    Vector3f textureIndex = new Vector3f(
-                            listIndex % maxTextureSize,
-                            (float) ((listIndex / maxTextureSize) % maxTextureSize),
-                            (listIndex / (maxTextureSize * maxTextureSize)) % maxTextureSize
-                    ).mul(1 / (float) maxTextureSize);
-                    // Create a link from the child node to the next indirection grid
-                    ig.setNode(i, Cell.createIndex(textureIndex));
                     // Subdivide the child node: Add a new intersection grid
-                    createNode(depth + 1, childBoxStart);
+                    int newIGIndex = createNode(depth + 1, childBoxStart);
 
-                    System.out.println(listIndex + ", " + maxTextureSize + ", " + maxTextureSize);
-                    System.out.println("(listIndex / maxTextureSize) % maxTextureSize = " + (listIndex / maxTextureSize) % maxTextureSize);
-                    System.out.println(textureIndex.mul(255, new Vector3f()).toString(NumberFormat.getIntegerInstance()));
+                    // Create a link from the child node to the next indirection grid
+                    // The texture index is the IG at current pool index + 1, which is the size()
+                    Vector3f textureIndex = getTextureIndex(newIGIndex);
+                    ig.setNode(i, Cell.createIndex(textureIndex));
                 }
             } else {
                 // If at max depth, possibly add a data node
                 if (intersection != null) {
                     // Create a data node with the color of the geometry
                     Vector3f color = new Vector3f(intersection.getColor());
-                    color.add(
-                            new Vector3f((float) Math.random(), (float) Math.random(), (float) Math.random())
-                                    .sub(new Vector3f(0.5f))
-                                    .mul(0.5f));
+//                    color.add(
+//                            new Vector3f((float) Math.random(), (float) Math.random(), (float) Math.random())
+//                                    .sub(new Vector3f(0.5f))
+//                                    .mul(0.5f));
                     ig.setNode(i, Cell.createData(color));
                 }
             }
         }
-
+        return currentIGIndex;
     }
 
     public int getMaxTextureSize() {
-        int minTextureSize = (int) Math.ceil(Math.pow(indirectionPool.size() * 8 * 4, 1/3f));
-        return 8; // nextPowerOfTwo(minTextureSize);
+//        int minTextureSize = (int) Math.ceil(Math.pow(indirectionPool.size() * 8 * 4, 1/3f));
+        // At the start it is not known how many IGs there are, so worst case scenario:
+        // every cell contains data
+        int textureSize = (int) Math.ceil(Math.pow(maxDepth * maxDepth * maxDepth * 8 * 4, 1/3f));
+        return nextPowerOfTwo(textureSize);
     }
 
     private static int nextPowerOfTwo(int value) {
@@ -143,17 +160,20 @@ public class SVO {
 //        int size = getMaxTextureSize();
         ByteBuffer textureData = BufferUtils.createByteBuffer(textureSize * textureSize * textureSize * 4); // 4 bytes since r g b a
 
-        for (IndirectionGrid ig : indirectionPool) {
-            ig.get(textureData);
+        // Half texture size since each cell is 2x2x2, so in each dimension it takes up 2 spaces
+        int halfTextureSize = textureSize / 2;
+        for (int i = 0; i < indirectionPool.size(); i++) {
+            int x = (i % halfTextureSize) * 2;
+            int y = ((i / halfTextureSize) % halfTextureSize) * 2;
+            int z = ((i / (halfTextureSize * halfTextureSize))) * 2;
+
+            System.out.println("Indir Grid " + i + " loc: " + x + ", " + y + ", " + z + " -> " + getTextureIndex(i).toString(new DecimalFormat("0.00")));
+
+            // Insert pool cells in a cube in texture memory
+            indirectionPool.get(i).get(textureSize, x, y, z, textureData);
         }
 
-//        indirectionPool.get(0).get(textureData);
-
-        // Pad left over texture space
-        while (textureData.hasRemaining()) {
-            textureData.putFloat(0);
-        }
-        textureData.flip();
+//        textureData.flip();
         return textureData;
     }
 

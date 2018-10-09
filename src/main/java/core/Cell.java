@@ -43,16 +43,16 @@ public class Cell {
         return NodeType.DATA;
     }
 
-    public void getData(ByteBuffer buffer) {
+    public void getData(int position, ByteBuffer buffer) {
         Vector4f realData = data;
         if (getNodeType() == NodeType.EMPTY) {
             realData = EMPTY_DATA;
         }
-//        realData.get(buffer);
-        buffer.put((byte) (realData.x * 255));
-        buffer.put((byte) (realData.y * 255));
-        buffer.put((byte) (realData.z * 255));
-        buffer.put((byte) (realData.w * 255));
+//        realData.get(position, buffer);
+        buffer.put(position + 0, (byte) (realData.x * 255));
+        buffer.put(position + 1, (byte) (realData.y * 255));
+        buffer.put(position + 2, (byte) (realData.z * 255));
+        buffer.put(position + 3, (byte) (realData.w * 255));
     }
 
     public static Cell createEmpty() {
