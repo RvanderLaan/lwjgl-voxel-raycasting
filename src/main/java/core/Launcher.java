@@ -213,7 +213,7 @@ public class Launcher {
     }
 
     private void createVoxelTexture() {
-        SVO svo = new SVO(2, 100);
+        SVO svo = new SVO(4, 100);
         svo.generateDemoScene();
         svo.generateSVO();
         int textureSize = svo.getMaxTextureSize();

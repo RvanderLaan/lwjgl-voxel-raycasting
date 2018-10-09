@@ -7,6 +7,7 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
 import java.nio.ByteBuffer;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 
 /**
@@ -37,7 +38,7 @@ public class SVO {
     }
 
     public void generateDemoScene() {
-        geometries.add(new Sphere(new Vector3f(worldSize / 2f), worldSize / 64f, new Vector3f(1, 0, 1)));
+        geometries.add(new Sphere(new Vector3f(worldSize / 2f), worldSize / 8f, new Vector3f(0.5f, 0.5f, 0.5f)));
     }
 
     public void generateSVO() {
@@ -83,22 +84,32 @@ public class SVO {
             if (depth + 1 != maxDepth) {
                 // If not at max depth, check whether the child node should be subdivided
                 if (intersection != null) {
-                    int listIndex = indirectionPool.size();
+                    int listIndex = indirectionPool.size() * 8; // 8 indices per indirection grid
+                    System.out.println("listIndex = " + listIndex);
                     Vector3f textureIndex = new Vector3f(
                             listIndex % maxTextureSize,
-                            (listIndex / 2) % maxTextureSize,
-                            (listIndex / 4) % maxTextureSize
+                            (float) ((listIndex / maxTextureSize) % maxTextureSize),
+                            (listIndex / (maxTextureSize * maxTextureSize)) % maxTextureSize
                     ).mul(1 / (float) maxTextureSize);
                     // Create a link from the child node to the next indirection grid
                     ig.setNode(i, Cell.createIndex(textureIndex));
                     // Subdivide the child node: Add a new intersection grid
                     createNode(depth + 1, childBoxStart);
+
+                    System.out.println(listIndex + ", " + maxTextureSize + ", " + maxTextureSize);
+                    System.out.println("(listIndex / maxTextureSize) % maxTextureSize = " + (listIndex / maxTextureSize) % maxTextureSize);
+                    System.out.println(textureIndex.mul(255, new Vector3f()).toString(NumberFormat.getIntegerInstance()));
                 }
             } else {
                 // If at max depth, possibly add a data node
                 if (intersection != null) {
                     // Create a data node with the color of the geometry
-                    ig.setNode(i, Cell.createData(intersection.getColor()));
+                    Vector3f color = new Vector3f(intersection.getColor());
+                    color.add(
+                            new Vector3f((float) Math.random(), (float) Math.random(), (float) Math.random())
+                                    .sub(new Vector3f(0.5f))
+                                    .mul(0.5f));
+                    ig.setNode(i, Cell.createData(color));
                 }
             }
         }
@@ -107,7 +118,7 @@ public class SVO {
 
     public int getMaxTextureSize() {
         int minTextureSize = (int) Math.ceil(Math.pow(indirectionPool.size() * 8 * 4, 1/3f));
-        return nextPowerOfTwo(minTextureSize);
+        return 8; // nextPowerOfTwo(minTextureSize);
     }
 
     private static int nextPowerOfTwo(int value) {
@@ -119,6 +130,9 @@ public class SVO {
     }
 
     public ByteBuffer getTextureData() {
+        // Todo: Each cell should be placed in memory as they are in space: 2x2x2 cube, instead of
+        // 8 values in a row as is happening now
+
 //        System.out.println("Generating texture...");
         System.out.println("max depth: " + maxDepth + ", " + "indirectionPool size: " + indirectionPool.size());
 

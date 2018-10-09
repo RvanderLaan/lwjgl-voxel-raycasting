@@ -23,7 +23,7 @@ public class Controller {
     Vector3f translationTemp = new Vector3f();
     public void update(float dt) {
         translationTemp.set(0);
-        float factor = 1.0f;
+        float factor = 0.1f;
         if (KeyboardHandler.isKeyDown(GLFW_KEY_LEFT_SHIFT))
             factor *= 3.0f;
         if (KeyboardHandler.isKeyDown(GLFW_KEY_LEFT_CONTROL))

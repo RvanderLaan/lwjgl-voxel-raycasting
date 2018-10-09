@@ -115,9 +115,9 @@ vec3 treeLookup(vec3 m) {
         // already in a leaf?
         if (cell.w < 0.9) {
             // compute lookup coords. within current node
-            p = mnd + cell.xyz;
+            p = (mnd + cell.xyz);
             // continue to next depth
-            cell = texture3D(voxelTexture, p);
+            cell = texture3D(voxelTexture, p + vec3(0.05));
         }
 
         if (cell.w > 0.9)    // a leaf has been reached
@@ -240,8 +240,12 @@ void main(void) {
    * item's framebuffer pixel.
    */
   vec3 color = trace(eye, normalize(dir));
+
+
 //    vec3 color = texture3D(voxelTexture, vec3(p, eye.x)).rgb;
-//    vec3 color = texture3D(voxelTexture, vec3(p, eye.x)).rgb;
+
+//    vec3 lookup = texture3D(voxelTexture, vec3(p, eye.x)).rgb;
+//    vec3 color = texture3D(voxelTexture, lookup.xyz + vec3(0.05)).rgb;
 
 
 
