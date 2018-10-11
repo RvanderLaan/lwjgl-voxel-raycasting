@@ -50,6 +50,11 @@ public class IndirectionGrid {
         children[index] = node;
     }
 
+    public static int getTextureIndex(int textureSize, int x, int y, int z, int child) {
+        Vector3i of = CHILD_TEXTURE_OFFSETS[child];
+        return (x + of.x) + (y + of.y) * textureSize + (z + of.z) * textureSize * textureSize;
+    }
+
     /**
      * Inserts the cells of this indirection grid in a 2x2x2 cube in a bytebuffer texture
      * @param textureSize
@@ -61,10 +66,14 @@ public class IndirectionGrid {
     public void get(int textureSize, int x, int y, int z, ByteBuffer buffer) {
         for (int i = 0; i < 8; i++) {
             Cell cell = children[i];
-            Vector3i of = CHILD_TEXTURE_OFFSETS[i];
-            int textureIndex = (x + of.x) + (y + of.y) * textureSize + (z + of.z) * textureSize * textureSize;
-//            System.out.println("textureIndex = " + textureIndex + " (=" + textureIndex * 4 + ")");
-            cell.getData(textureIndex * 4, buffer);
+            int textureIndex = getTextureIndex(textureSize, x, y, z, i);
+            int position = textureIndex * 4;
+            if (position < buffer.limit()) {
+                cell.getData(position, buffer);
+            } else {
+                System.out.println("OUT OF LIMITS: " + x + ", " + y + ", " + z + " -> " + position + "(>" + buffer.limit() + ")");
+                break;
+            }
         }
     }
 }

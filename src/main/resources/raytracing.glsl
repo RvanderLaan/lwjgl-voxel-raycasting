@@ -105,19 +105,40 @@ bool intersectBoxes(vec3 origin, vec3 dir, out hitinfo info) {
   return found;
 }
 
+uint hash3(uint x, uint y, uint z) {
+  x += x >> 11;
+  x ^= x << 7;
+  x += y;
+  x ^= x << 3;
+  x += z ^ (x >> 14);
+  x ^= x << 6;
+  x += x >> 15;
+  x ^= x << 5;
+  x += x >> 12;
+  x ^= x << 9;
+  return x;
+}
+float random(vec3 f) {
+  uint mantissaMask = 0x007FFFFFu;
+  uint one = 0x3F800000u;
+  uvec3 u = floatBitsToUint(f);
+  uint h = hash3(u.x, u.y, u.z);
+  return uintBitsToFloat((h & mantissaMask) | one) - 1.0;
+}
 
-vec3 treeLookup(vec3 m) {
+
+vec4 treeLookup(vec3 m) {
     vec4 cell = vec4(0.0, 0.0, 0.0, 0.0);
     vec3 mnd = m;
     vec3 p;
+    float pow2 = 1;
 
     for (float i = 0; i < HRDWTREE_MAX_DEPTH; i++) { // fixed # of iterations
         // already in a leaf?
         if (cell.w < 0.9) {
             // compute lookup coords. within current node
-//            p = (mnd + cell.xyz);
-            p = cell.xyz + mnd * invNumberOfIndGrids;
-            p += vec3(0.1);
+            p = cell.xyz + fract(m * pow2)* invNumberOfIndGrids;
+//            p = cell.xyz + mnd * invNumberOfIndGrids;
             // continue to next depth
             cell = texture3D(voxelTexture, p); // maybe offset slightly? + vec3(0.05));
         }
@@ -126,12 +147,13 @@ vec3 treeLookup(vec3 m) {
             break;
 
         if (cell.w < 0.1) // empty cell
-            return vec3(0);
+            return vec4(0);
 
         // compute pos within next depth grid
         mnd = mnd * 2;
+        pow2 *= 2;
     }
-    return cell.xyz;
+    return cell;
 }
 
 /**
@@ -149,12 +171,14 @@ vec3 trace(vec3 origin, vec3 dir) {
     // Todo: Intersect with cell borders at deepest depth instead of brute forcing samples
 
     // Start lookup always at bounds of unit cube
+    // (this is brute force, should just clamp the ray between vec3(0) and vec3(1) along the dir
 //    float distToUnitCube =
 //    lookup += dir *
     for (float i = 0.0005;
         i < 1;
         i *= 1.05) {
         lookup += dir * i;
+//        lookup += dir * i * random(lookup);
 
         if ((all(lessThan(lookup, vec3(1))) && all(greaterThanEqual(lookup, vec3(0)))))
             break;
@@ -165,18 +189,19 @@ vec3 trace(vec3 origin, vec3 dir) {
             all(lessThan(lookup, vec3(1))) && all(greaterThanEqual(lookup, vec3(0)));
             i *= 1.05) {
 
-//        vec3 color = treeLookup(lookup);
+        vec4 cell = treeLookup(lookup);
 
         // Use this to look at the 3d volume texture directly
-        vec3 color = texture3D(voxelTexture, lookup).rgb;
+//        vec4 cell = texture3D(voxelTexture, lookup);
 
         // Use this to look up a color and use it as a lookup
 //        vec3 lookup2 = texture3D(voxelTexture, lookup).rgb;
 //        vec3 color = texture3D(voxelTexture, lookup2).rgb;
 
-        if (color != vec3(0))
-            return color;
-        lookup += dir * i;
+        if (cell.w != 0)
+            return cell.rgb;
+//        lookup += dir * i; // Larger steps further from the camera
+        lookup += dir * i * random(lookup); // noisy borders
     }
     // If no lookup succeeds, return a background color
     return vec3(0);

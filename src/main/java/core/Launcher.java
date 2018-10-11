@@ -60,6 +60,7 @@ public class Launcher {
     private long window;
     private int width = 800;
     private int height = 600;
+    private int fps = 0;
     /**  Whether we need to recreate our ray tracer framebuffer. */
     private boolean resetFramebuffer = true;
 
@@ -213,12 +214,13 @@ public class Launcher {
     }
 
     private void createVoxelTexture() {
-        SVO svo = new SVO(4, 100);
+        SVO svo = new SVO(6, 100);
+        int textureSize = svo.getMaxTextureSize();
+        System.out.println("Texture size: " + textureSize + "^3");
         svo.generateDemoScene();
         svo.generateSVO();
-        int textureSize = svo.getMaxTextureSize();
         invNumberOfIndGrids = 2f / (float) textureSize;
-        System.out.println("invNumberOfIndGrids = " + invNumberOfIndGrids);
+        System.out.println("invNumberOfIndGrids = " + invNumberOfIndGrids + " -> " + 1 / invNumberOfIndGrids);
 //        System.out.println("textureSize + \", \" + invNumberOfIndGrids = " + textureSize + ", " + invNumberOfIndGrids);
         voxelTexture = SVO.uploadTexture(textureSize, svo.getTextureData());
     }
@@ -234,7 +236,7 @@ public class Launcher {
         MouseButtonHandler.update();
 
         String camPosText = camera.getPosition().toString(new DecimalFormat("0.0"));
-        glfwSetWindowTitle(window, "SVO Ray tracing - CamPos: " + camPosText);
+        glfwSetWindowTitle(window, "SVO Ray tracing - " + fps + " FPS - CamPos: " + camPosText);
     }
 
     /** Create a VAO with a full-screen quad VBO.
@@ -482,7 +484,7 @@ public class Launcher {
 
         long nanoStart = System.nanoTime();
         float dt = 1 / 60f;
-        int fps = 0;
+        int fpsCounter = 0;
         long fpsNanoStart = System.nanoTime();
 
         // Our render loop is really simple...
@@ -510,11 +512,11 @@ public class Launcher {
             nanoStart = System.nanoTime();
 
             if (nanoNow - fpsNanoStart > 1e9) {
-                System.out.println("FPS: " + fps);
                 fpsNanoStart = nanoNow;
-                fps = 0;
+                fps = fpsCounter;
+                fpsCounter = 0;
             }
-            fps++;
+            fpsCounter++;
         }
     }
 

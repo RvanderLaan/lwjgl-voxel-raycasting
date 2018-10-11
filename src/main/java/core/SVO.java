@@ -39,7 +39,7 @@ public class SVO {
     }
 
     public void generateDemoScene() {
-        geometries.add(new Sphere(new Vector3f(worldSize / 2f), worldSize / 1f, new Vector3f(0.5f, 0.5f, 0.5f)));
+        geometries.add(new Sphere(new Vector3f(worldSize / 2f), worldSize / 2f, new Vector3f(0.5f, 0.5f, 0.5f)));
     }
 
     public void generateSVO() {
@@ -119,10 +119,11 @@ public class SVO {
                 if (intersection != null) {
                     // Create a data node with the color of the geometry
                     Vector3f color = new Vector3f(intersection.getColor());
-                    color.add(
-                            new Vector3f((float) Math.random(), (float) Math.random(), (float) Math.random())
-                                    .sub(new Vector3f(0.5f))
-                                    .mul(0.5f));
+//                    color.add(
+//                            new Vector3f((float) Math.random(), (float) Math.random(), (float) Math.random())
+//                                    .sub(new Vector3f(0.5f))
+//                                    .mul(0.5f));
+                    color.set(childBoxStart).div(worldSize);
                     ig.setNode(i, Cell.createData(color));
                 }
             }
@@ -131,12 +132,14 @@ public class SVO {
     }
 
     public int getMaxTextureSize() {
-//        int minTextureSize = (int) Math.ceil(Math.pow(indirectionPool.size() * 8 * 4, 1/3f));
         // At the start it is not known how many IGs there are, so worst case scenario:
         // every cell contains data
-        int n = maxDepth * maxDepth * maxDepth * 8 * 4;
+        // This means:
+        // Every depth step, 2 new cells per dimension
+        // for every data cell, log(N) index cells
+        int n = (int) Math.pow(2, maxDepth - 1);
         int logN = (int) Math.log(n);
-        int textureSize = (int) Math.ceil(Math.pow(n * 2, 1/3f));
+        int textureSize = n + logN;
         return nextPowerOfTwo(textureSize);
     }
 
@@ -164,17 +167,20 @@ public class SVO {
 
         // Half texture size since each cell is 2x2x2, so in each dimension it takes up 2 spaces
         int halfTextureSize = textureSize / 2;
+        int x = 0, y = 0, z = 0;
         for (int i = 0; i < indirectionPool.size(); i++) {
-            int x = (i % halfTextureSize) * 2;
-            int y = ((i / halfTextureSize) % halfTextureSize) * 2;
-            int z = ((i / (halfTextureSize * halfTextureSize))) * 2;
+            x = (i % halfTextureSize) * 2;
+            y = ((i / halfTextureSize) % halfTextureSize) * 2;
+            z = ((i / (halfTextureSize * halfTextureSize))) * 2;
 
-            System.out.println("Indir Grid " + i + " loc: " + x + ", " + y + ", " + z + " -> " + getTextureIndex(i).toString(new DecimalFormat("0.00")));
+//            System.out.println("Indir Grid " + i + " loc: " + x + ", " + y + ", " + z + " -> " + getTextureIndex(i).toString(new DecimalFormat("0.00")));
 
             // Insert pool cells in a cube in texture memory
             indirectionPool.get(i).get(textureSize, x, y, z, textureData);
         }
 
+        int bytesLeft = textureData.limit() - IndirectionGrid.getTextureIndex(textureSize, x, y, z, 7);
+        System.out.println("Bytes left: " + bytesLeft + "(=" + (bytesLeft / 4) / 8 + " left over IRs out of " + ((textureData.limit() / 4) / 8) + ")");
 //        textureData.flip();
         return textureData;
     }
