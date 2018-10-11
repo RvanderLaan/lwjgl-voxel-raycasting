@@ -177,8 +177,8 @@ vec3 trace(vec3 origin, vec3 dir) {
     for (float i = 0.0005;
         i < 1;
         i *= 1.05) {
-        lookup += dir * i;
-//        lookup += dir * i * random(lookup);
+//        lookup += dir * i;
+        lookup += dir * i * random(lookup);
 
         if ((all(lessThan(lookup, vec3(1))) && all(greaterThanEqual(lookup, vec3(0)))))
             break;
