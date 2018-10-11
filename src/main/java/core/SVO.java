@@ -39,7 +39,7 @@ public class SVO {
     }
 
     public void generateDemoScene() {
-        geometries.add(new Sphere(new Vector3f(worldSize / 2f), worldSize / 16f, new Vector3f(0.5f, 0.5f, 0.5f)));
+        geometries.add(new Sphere(new Vector3f(worldSize / 2f), worldSize / 1f, new Vector3f(0.5f, 0.5f, 0.5f)));
     }
 
     public void generateSVO() {
@@ -119,10 +119,10 @@ public class SVO {
                 if (intersection != null) {
                     // Create a data node with the color of the geometry
                     Vector3f color = new Vector3f(intersection.getColor());
-//                    color.add(
-//                            new Vector3f((float) Math.random(), (float) Math.random(), (float) Math.random())
-//                                    .sub(new Vector3f(0.5f))
-//                                    .mul(0.5f));
+                    color.add(
+                            new Vector3f((float) Math.random(), (float) Math.random(), (float) Math.random())
+                                    .sub(new Vector3f(0.5f))
+                                    .mul(0.5f));
                     ig.setNode(i, Cell.createData(color));
                 }
             }
@@ -134,7 +134,9 @@ public class SVO {
 //        int minTextureSize = (int) Math.ceil(Math.pow(indirectionPool.size() * 8 * 4, 1/3f));
         // At the start it is not known how many IGs there are, so worst case scenario:
         // every cell contains data
-        int textureSize = (int) Math.ceil(Math.pow(maxDepth * maxDepth * maxDepth * 8 * 4, 1/3f));
+        int n = maxDepth * maxDepth * maxDepth * 8 * 4;
+        int logN = (int) Math.log(n);
+        int textureSize = (int) Math.ceil(Math.pow(n * 2, 1/3f));
         return nextPowerOfTwo(textureSize);
     }
 

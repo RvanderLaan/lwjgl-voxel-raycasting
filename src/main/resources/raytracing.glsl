@@ -19,7 +19,7 @@ uniform sampler3D voxelTexture;
  */
 uniform vec3 eye, ray00, ray01, ray10, ray11;
 
-uniform float invVoxelTextureSize;
+uniform float invNumberOfIndGrids;
 
 #define LARGE_FLOAT 1E+10
 #define NUM_BOXES 10
@@ -115,7 +115,9 @@ vec3 treeLookup(vec3 m) {
         // already in a leaf?
         if (cell.w < 0.9) {
             // compute lookup coords. within current node
-            p = (mnd + cell.xyz);
+//            p = (mnd + cell.xyz);
+            p = cell.xyz + mnd * invNumberOfIndGrids;
+            p += vec3(0.1);
             // continue to next depth
             cell = texture3D(voxelTexture, p); // maybe offset slightly? + vec3(0.05));
         }
@@ -144,23 +146,34 @@ vec3 treeLookup(vec3 m) {
 vec3 trace(vec3 origin, vec3 dir) {
     vec3 lookup = origin;
 
+    // Todo: Intersect with cell borders at deepest depth instead of brute forcing samples
+
     // Start lookup always at bounds of unit cube
 //    float distToUnitCube =
 //    lookup += dir *
-//    for (float i = 0;
-//        i < 1;
-//        i += 0.1) {
-//        lookup += dir * i;
-//
-//        if ((all(lessThan(lookup, vec3(1))) && all(greaterThanEqual(lookup, vec3(0)))))
-//            break;
-//    }
+    for (float i = 0.0005;
+        i < 1;
+        i *= 1.05) {
+        lookup += dir * i;
+
+        if ((all(lessThan(lookup, vec3(1))) && all(greaterThanEqual(lookup, vec3(0)))))
+            break;
+    }
 
     // Do several lookups along rays from the camera viewpoint
-    for (float i = 0.0;
+    for (float i = 0.0005;
             all(lessThan(lookup, vec3(1))) && all(greaterThanEqual(lookup, vec3(0)));
-            i += 0.01) {
-        vec3 color = treeLookup(lookup);
+            i *= 1.05) {
+
+//        vec3 color = treeLookup(lookup);
+
+        // Use this to look at the 3d volume texture directly
+        vec3 color = texture3D(voxelTexture, lookup).rgb;
+
+        // Use this to look up a color and use it as a lookup
+//        vec3 lookup2 = texture3D(voxelTexture, lookup).rgb;
+//        vec3 color = texture3D(voxelTexture, lookup2).rgb;
+
         if (color != vec3(0))
             return color;
         lookup += dir * i;

@@ -77,8 +77,8 @@ public class Launcher {
 
     /** The texture containing the voxelized data structure */
     private int voxelTexture;
-    private int invVoxelTextureSizeUniform;
-    private float invVoxelTextureSize;
+    private int invNumberOfIndGridsUniform;
+    private float invNumberOfIndGrids;
 
     /** The location of the 'eye' uniform declared in the compute shader holding the
      * world-space eye position. */
@@ -182,7 +182,7 @@ public class Launcher {
         GLFWVidMode vidmode = glfwGetVideoMode(glfwGetPrimaryMonitor());
         glfwSetWindowPos(window, (vidmode.width() - width) / 2, (vidmode.height() - height) / 2);
         glfwMakeContextCurrent(window);
-        glfwSwapInterval(1);
+        glfwSwapInterval(1); // ctrl f vsync v-sync
         glfwShowWindow(window);
 
         /*
@@ -217,8 +217,9 @@ public class Launcher {
         svo.generateDemoScene();
         svo.generateSVO();
         int textureSize = svo.getMaxTextureSize();
-        invVoxelTextureSize = 1 / (float) textureSize;
-//        System.out.println("textureSize + \", \" + invVoxelTextureSize = " + textureSize + ", " + invVoxelTextureSize);
+        invNumberOfIndGrids = 2f / (float) textureSize;
+        System.out.println("invNumberOfIndGrids = " + invNumberOfIndGrids);
+//        System.out.println("textureSize + \", \" + invNumberOfIndGrids = " + textureSize + ", " + invNumberOfIndGrids);
         voxelTexture = SVO.uploadTexture(textureSize, svo.getTextureData());
     }
 
@@ -345,7 +346,7 @@ public class Launcher {
 
         voxelTextureUniform = glGetUniformLocation(computeProgram, "voxelTexture");
 
-        invVoxelTextureSizeUniform = glGetUniformLocation(computeProgram, "invVoxelTextureSize");
+        invNumberOfIndGridsUniform = glGetUniformLocation(computeProgram, "invNumberOfIndGrids");
 
         glUseProgram(0);
     }
@@ -390,7 +391,8 @@ public class Launcher {
 
         /* Rotate camera about Y axis. */
 //        cameraPosition.set((float) sin(-currRotationAboutY) * 3.0f, 2.0f, (float) cos(-currRotationAboutY) * 3.0f).normalize();
-        viewMatrix.set(camera.getRotation());
+        Vector3f lookat = camera.getRotation().transform(new Vector3f(0, 0, 1)).add(camera.getPosition());
+        viewMatrix.setLookAt(camera.getPosition(), lookat, Camera.UP);
 
         /*
          * If the framebuffer size has changed, because the GLFW window was resized, we
@@ -424,7 +426,7 @@ public class Launcher {
         glUniform3f(ray11Uniform, tmpVector.x, tmpVector.y, tmpVector.z);
 
         // Set voxel texture size
-        glUniform1f(invVoxelTextureSizeUniform, invVoxelTextureSize);
+        glUniform1f(invNumberOfIndGridsUniform, invNumberOfIndGrids);
         // Set voxel texture location (TEXTURE0)
         glUniform1i(voxelTextureUniform, 0);
 
@@ -477,12 +479,18 @@ public class Launcher {
     }
 
     private void loop() {
+
+        long nanoStart = System.nanoTime();
+        float dt = 1 / 60f;
+        int fps = 0;
+        long fpsNanoStart = System.nanoTime();
+
         // Our render loop is really simple...
         while (!glfwWindowShouldClose(window)) {
             // ...we just poll for GLFW window events (as usual).
             glfwPollEvents();
 
-            update(1 / 60f); // todo: measure delta time
+            update(dt); // todo: measure delta time
 
             // Tell OpenGL about any possibly modified viewport size.
             glViewport(0, 0, width, height);
@@ -495,6 +503,18 @@ public class Launcher {
             // Tell the GLFW window to swap buffers so that our rendered framebuffer texture
             // becomes visible.
             glfwSwapBuffers(window);
+
+            long nanoNow = System.nanoTime();
+            dt = (nanoNow - nanoStart) / 1e9f;
+
+            nanoStart = System.nanoTime();
+
+            if (nanoNow - fpsNanoStart > 1e9) {
+                System.out.println("FPS: " + fps);
+                fpsNanoStart = nanoNow;
+                fps = 0;
+            }
+            fps++;
         }
     }
 

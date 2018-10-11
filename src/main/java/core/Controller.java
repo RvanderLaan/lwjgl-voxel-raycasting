@@ -20,41 +20,45 @@ public class Controller {
         this.camera = camera;
     }
 
-    Vector3f translationTemp = new Vector3f();
+    Vector3f localTranslationTemp = new Vector3f();
+    Vector3f globalTranslationTemp = new Vector3f();
+
     public void update(float dt) {
-        translationTemp.set(0);
-        float factor = 0.1f;
+        localTranslationTemp.set(0);
+        globalTranslationTemp.set(0);
+        float factor = 0.5f;
         if (KeyboardHandler.isKeyDown(GLFW_KEY_LEFT_SHIFT))
             factor *= 3.0f;
         if (KeyboardHandler.isKeyDown(GLFW_KEY_LEFT_CONTROL))
             factor /= 3.0f;
 
         if (KeyboardHandler.isKeyDown(GLFW_KEY_W)) {
-            translationTemp.add(0, 0, factor * dt);
+            localTranslationTemp.add(0, 0, factor * dt);
         }
         if (KeyboardHandler.isKeyDown(GLFW_KEY_S)) {
-            translationTemp.add(0, 0, -factor * dt);
+            localTranslationTemp.add(0, 0, -factor * dt);
         }
         if (KeyboardHandler.isKeyDown(GLFW_KEY_A)) {
-            translationTemp.add(factor * dt, 0, 0);
+            localTranslationTemp.add(factor * dt, 0, 0);
         }
         if (KeyboardHandler.isKeyDown(GLFW_KEY_D)) {
-            translationTemp.add(-factor * dt, 0, 0);
+            localTranslationTemp.add(-factor * dt, 0, 0);
         }
         if (KeyboardHandler.isKeyDown(GLFW_KEY_LEFT_ALT)) {
-            translationTemp.add(0, factor * dt, 0);
+            globalTranslationTemp.add(0, -factor * dt, 0);
         }
         if (KeyboardHandler.isKeyDown(GLFW_KEY_SPACE)) {
-            translationTemp.add(0, -factor * dt, 0);
+            globalTranslationTemp.add(0, factor * dt, 0);
         }
-        camera.getPosition().add(translationTemp.rotate(camera.getRotation()));
+        camera.getPosition().add(localTranslationTemp.rotate(camera.getRotation()));
+        camera.getPosition().add(globalTranslationTemp);
 
 
         if (KeyboardHandler.isKeyDown(GLFW_KEY_Q)) {
-            camera.getRotation().rotateLocalZ(-factor * dt);
+            camera.getRotation().rotateZ(-factor * dt);
         }
         if (KeyboardHandler.isKeyDown(GLFW_KEY_E)) {
-            camera.getRotation().rotateLocalZ(factor * dt);
+            camera.getRotation().rotateZ(factor * dt);
         }
 
 
@@ -62,8 +66,8 @@ public class Controller {
 
             // If mouse is down, compute the camera rotation based on mouse cursor location.
 //            currRotationAboutY = rotationAboutY + (mouseX - mouseDownX) * 0.01f;
-            camera.getRotation().rotateLocalY((CursorHandler.getCursorPos().x - prevCursorPos.x) * mouseSensitivity.x * dt);
-            camera.getRotation().rotateLocalX((CursorHandler.getCursorPos().y - prevCursorPos.y) * mouseSensitivity.y * dt);
+            camera.getRotation().rotateLocalY(-(CursorHandler.getCursorPos().x - prevCursorPos.x) * mouseSensitivity.x * dt);
+            camera.getRotation().rotateX((CursorHandler.getCursorPos().y - prevCursorPos.y) * mouseSensitivity.y * dt);
         }
 
         prevCursorPos.set(CursorHandler.getCursorPos());
