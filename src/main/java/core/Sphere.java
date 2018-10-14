@@ -1,5 +1,6 @@
 package core;
 
+import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.joml.Vector3f;
@@ -7,8 +8,10 @@ import org.joml.Vector3f;
 @RequiredArgsConstructor
 public class Sphere extends Geometry {
 
-    @NonNull private Vector3f origin;
-    @NonNull private float radius;
+    @NonNull @Getter
+    private Vector3f origin;
+    @NonNull @Getter
+    private float radius;
 
     public Sphere(Vector3f origin, float radius, Vector3f color) {
         this.origin = origin;
@@ -20,8 +23,12 @@ public class Sphere extends Geometry {
 
     @Override
     public boolean intersects(Vector3f boxStart, Vector3f boxEnd) {
+        boolean intersectsVolume = intersectsVolume(boxStart, boxEnd, radius);
+        return intersectsVolume;
+    }
+
+    public boolean intersectsVolume(Vector3f boxStart, Vector3f boxEnd, float R) {
         // https://stackoverflow.com/questions/4578967/cube-sphere-intersection-test
-        float R = radius;
         Vector3f S = origin;
 
         float dist_squared = R * R;

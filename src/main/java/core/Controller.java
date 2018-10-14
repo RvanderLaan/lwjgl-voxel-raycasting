@@ -26,11 +26,11 @@ public class Controller {
     public void update(float dt) {
         localTranslationTemp.set(0);
         globalTranslationTemp.set(0);
-        float factor = 0.5f;
+        float factor = 0.1f;
         if (KeyboardHandler.isKeyDown(GLFW_KEY_LEFT_SHIFT))
             factor *= 3.0f;
         if (KeyboardHandler.isKeyDown(GLFW_KEY_LEFT_CONTROL))
-            factor /= 3.0f;
+            factor /= 10.0f;
 
         if (KeyboardHandler.isKeyDown(GLFW_KEY_W)) {
             localTranslationTemp.add(0, 0, factor * dt);

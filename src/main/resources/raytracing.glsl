@@ -21,6 +21,12 @@ uniform vec3 eye, ray00, ray01, ray10, ray11;
 
 uniform float invNumberOfIndGrids;
 
+// How to look up colors:
+// 0: Traverse the octree
+// 1: Show the 3D texture directly as it is stored in memory
+// 2: Same as (1) but show the color that the voxels point to
+uniform int lookupMode = 1;
+
 #define LARGE_FLOAT 1E+10
 #define NUM_BOXES 10
 #define EPSILON 0.0001
@@ -34,6 +40,8 @@ uniform float invNumberOfIndGrids;
 struct box {
   vec3 min, max;
 };
+
+const box unitBox = {vec3(0), vec3(1)};
 
 /**
  * Our scene description is very simple. We just use a static array
@@ -137,10 +145,10 @@ vec4 treeLookup(vec3 m) {
         // already in a leaf?
         if (cell.w < 0.9) {
             // compute lookup coords. within current node
-            p = cell.xyz + fract(m * pow2)* invNumberOfIndGrids;
-//            p = cell.xyz + mnd * invNumberOfIndGrids;
+            p = cell.xyz + fract(m * pow2)* invNumberOfIndGrids; // unoptimzed
+//            p = cell.xyz + mnd * invNumberOfIndGrids; // should work faster
             // continue to next depth
-            cell = texture3D(voxelTexture, p); // maybe offset slightly? + vec3(0.05));
+            cell = texture(voxelTexture, p); // maybe offset slightly? + vec3(0.05));
         }
 
         if (cell.w > 0.9)    // a leaf has been reached
@@ -156,6 +164,10 @@ vec4 treeLookup(vec3 m) {
     return cell;
 }
 
+bool isInUnitCube(vec3 lookup) {
+    return all(lessThan(lookup, vec3(1))) && all(greaterThanEqual(lookup, vec3(0)));
+}
+
 /**
  * Given the ray `origin + t * dir` trace it through the scene,
  * checking for the nearest collision with any of the above defined
@@ -166,42 +178,45 @@ vec4 treeLookup(vec3 m) {
  * @returns the computed color
  */
 vec3 trace(vec3 origin, vec3 dir) {
+    // Define the initial travseral lookup point
     vec3 lookup = origin;
 
-    // Todo: Intersect with cell borders at deepest depth instead of brute forcing samples
-
-    // Start lookup always at bounds of unit cube
-    // (this is brute force, should just clamp the ray between vec3(0) and vec3(1) along the dir
-//    float distToUnitCube =
-//    lookup += dir *
-    for (float i = 0.0005;
-        i < 1;
-        i *= 1.05) {
-//        lookup += dir * i;
-        lookup += dir * i * random(lookup);
-
-        if ((all(lessThan(lookup, vec3(1))) && all(greaterThanEqual(lookup, vec3(0)))))
-            break;
+    // Start lookup always at bounds of unit cube, else you get texture repeat artifacts
+    if (!isInUnitCube(lookup)) {
+        vec2 unitBoxIntersection = intersectBox(origin, dir, unitBox);
+        lookup += dir * unitBoxIntersection.x * 1.001;
     }
 
+    // Todo: Intersect with cells at deepest depth instead of brute forcing samples
+    // Like this: http://www.cse.yorku.ca/~amana/research/grid.pdf
+
+    // Quick n dirty implementation for now:
     // Do several lookups along rays from the camera viewpoint
-    for (float i = 0.0005;
-            all(lessThan(lookup, vec3(1))) && all(greaterThanEqual(lookup, vec3(0)));
-            i *= 1.05) {
 
-        vec4 cell = treeLookup(lookup);
+    vec4 cell;
+    float lookupDist = 0.005;
+    for (int i = 0;
+        i < 32; // isInUnitCube(lookup);
+        i++) {
+        if (lookupMode == 1) {
+            // Look up the value that the current cell is pointing to
+            cell = treeLookup(lookup);
+        } else if (lookupMode == 2) {
+            // Use this instead to look at the 3d volume texture directly
+            cell = texture(voxelTexture, lookup);
+        } else {
+            // Use this instead to look up a color and use it as a lookup
+            vec3 lookup2 = texture(voxelTexture, lookup).rgb;
+            cell = texture(voxelTexture, lookup2);
+        }
 
-        // Use this to look at the 3d volume texture directly
-//        vec4 cell = texture3D(voxelTexture, lookup);
-
-        // Use this to look up a color and use it as a lookup
-//        vec3 lookup2 = texture3D(voxelTexture, lookup).rgb;
-//        vec3 color = texture3D(voxelTexture, lookup2).rgb;
-
+        // If it's not and empty cell, return its color
         if (cell.w != 0)
             return cell.rgb;
-//        lookup += dir * i; // Larger steps further from the camera
-        lookup += dir * i * random(lookup); // noisy borders
+
+        lookupDist *= 1.05;
+        lookup += dir * lookupDist; // Larger steps further from the camera
+//        lookup += dir * i * (random(lookup) + 0.01); // noisy borders
     }
     // If no lookup succeeds, return a background color
     return vec3(0);
@@ -220,7 +235,7 @@ vec3 trace(vec3 origin, vec3 dir) {
    * just allow us to visually differentiate the boxes.
    */
   return vec3(float(hinfo.i+1) / NUM_BOXES);
-//    return texture3D(voxelTexture, origin * 10).rgb;
+//    return texture(voxelTexture, origin * 10).rgb;
 }
 
 
@@ -279,12 +294,13 @@ void main(void) {
    */
   vec3 color = trace(eye, normalize(dir));
 
-//    vec3 color = texture3D(voxelTexture, vec3(p, eye.x)).rgb;
+//    vec3 color = texture(voxelTexture, vec3(p, eye.x)).rgb;
 
-//    vec3 lookup = texture3D(voxelTexture, vec3(p, eye.x)).rgb;
-//    vec3 color = texture3D(voxelTexture, lookup.xyz + vec3(0.05)).rgb;
+//    vec3 lookup = texture(voxelTexture, vec3(p, eye.x)).rgb;
+//    vec3 color = texture(voxelTexture, lookup.xyz + vec3(0.05)).rgb;
 
 
+//    vec3 color = vec3(p, eye.x);
 
   /*
    * Store the final color in the framebuffer's pixel of the current

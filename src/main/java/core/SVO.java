@@ -39,7 +39,7 @@ public class SVO {
     }
 
     public void generateDemoScene() {
-        geometries.add(new Sphere(new Vector3f(worldSize / 2f), worldSize / 2f, new Vector3f(0.5f, 0.5f, 0.5f)));
+        geometries.add(new Sphere(new Vector3f(worldSize / 2f), worldSize / 4f, new Vector3f(0.5f, 0.5f, 0.5f)));
     }
 
     public void generateSVO() {
@@ -137,9 +137,10 @@ public class SVO {
         // This means:
         // Every depth step, 2 new cells per dimension
         // for every data cell, log(N) index cells
-        int n = (int) Math.pow(2, maxDepth - 1);
+        int n = (int) Math.pow(2, maxDepth);
         int logN = (int) Math.log(n);
         int textureSize = n + logN;
+        textureSize /= 2; // Todo: Assumption that 3/4 of the space is empty, may break stuff
         return nextPowerOfTwo(textureSize);
     }
 
@@ -190,10 +191,10 @@ public class SVO {
 
         GL11.glEnable(GL12.GL_TEXTURE_3D);
         GL11.glBindTexture(GL12.GL_TEXTURE_3D, texID);
-        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_LINEAR);
-        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_LINEAR);
-//        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_NEAREST);
-//        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NEAREST);
+//        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_LINEAR);
+//        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_LINEAR);
+        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_NEAREST);
+        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NEAREST);
         GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_WRAP_S, GL11.GL_REPEAT);
         GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_WRAP_T, GL11.GL_REPEAT);
         GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL12.GL_TEXTURE_WRAP_R, GL11.GL_REPEAT);
