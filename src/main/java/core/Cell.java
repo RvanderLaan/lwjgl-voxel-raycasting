@@ -49,10 +49,10 @@ public class Cell {
             realData = EMPTY_DATA;
         }
 //        realData.get(position, buffer);
-        buffer.put(position + 0, (byte) Math.round(realData.x * 255f));
-        buffer.put(position + 1, (byte) Math.round(realData.y * 255f));
-        buffer.put(position + 2, (byte) Math.round(realData.z * 255f));
-        buffer.put(position + 3, (byte) Math.round(realData.w * 255f));
+        buffer.put(position + 0, (byte) Math.floor(realData.x * 255f));
+        buffer.put(position + 1, (byte) Math.floor(realData.y * 255f));
+        buffer.put(position + 2, (byte) Math.floor(realData.z * 255f));
+        buffer.put(position + 3, (byte) Math.floor(realData.w * 255f));
     }
 
     public static Cell createEmpty() {

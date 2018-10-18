@@ -137,15 +137,16 @@ float random(vec3 f) {
 
 vec4 treeLookup(vec3 m) {
     vec4 cell = vec4(0.0, 0.0, 0.0, 0.0);
-    vec3 mnd = m;
+//    vec3 mnd = m;
     vec3 p;
-    float pow2 = 1;
+    float pow2 = 1.0;
 
     for (float i = 0; i < HRDWTREE_MAX_DEPTH; i++) { // fixed # of iterations
         // already in a leaf?
         if (cell.w < 0.9) {
             // compute lookup coords. within current node
-            p = cell.xyz + fract(m * pow2)* invNumberOfIndGrids; // unoptimzed
+            p = cell.xyz + fract(m * pow2) * invNumberOfIndGrids; // unoptimzed
+//            p += 1 / 255.0; // Shift the lookup half a texel to avoid wrapping
 //            p = cell.xyz + mnd * invNumberOfIndGrids; // should work faster
             // continue to next depth
             cell = texture(voxelTexture, p); // maybe offset slightly? + vec3(0.05));
@@ -158,7 +159,7 @@ vec4 treeLookup(vec3 m) {
             return vec4(0);
 
         // compute pos within next depth grid
-        mnd = mnd * 2;
+//        mnd = mnd * 2;
         pow2 *= 2;
     }
     return cell;
@@ -196,7 +197,7 @@ vec3 trace(vec3 origin, vec3 dir) {
     vec4 cell;
     float lookupDist = 0.005;
     for (int i = 0;
-        i < 32; // isInUnitCube(lookup);
+        isInUnitCube(lookup);
         i++) {
         if (lookupMode == 1) {
             // Look up the value that the current cell is pointing to
@@ -214,9 +215,9 @@ vec3 trace(vec3 origin, vec3 dir) {
         if (cell.w != 0)
             return cell.rgb;
 
-        lookupDist *= 1.05;
+        lookupDist *= 1.005;
         lookup += dir * lookupDist; // Larger steps further from the camera
-//        lookup += dir * i * (random(lookup) + 0.01); // noisy borders
+//        lookup += dir * lookupDist * (random(lookup) + 0.01); // noisy borders
     }
     // If no lookup succeeds, return a background color
     return vec3(0);
@@ -294,7 +295,11 @@ void main(void) {
    */
   vec3 color = trace(eye, normalize(dir));
 
-//    vec3 color = texture(voxelTexture, vec3(p, eye.x)).rgb;
+    // Simple dithering effect, can maybe be used for shadows?
+    // Or differentiating types of nodes?
+  // color = mix(color, vec3(0), vec3((px / 2) % 2 == ivec2(0)));
+
+//    vec3 color = texture(voxelTexture, vec3(p, eye.x) + 1 / 255.0).rgb;
 
 //    vec3 lookup = texture(voxelTexture, vec3(p, eye.x)).rgb;
 //    vec3 color = texture(voxelTexture, lookup.xyz + vec3(0.05)).rgb;

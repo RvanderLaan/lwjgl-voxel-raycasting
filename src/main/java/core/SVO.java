@@ -1,15 +1,17 @@
 package core;
 
+import Geometry.Geometry;
 import lombok.Getter;
 import org.joml.Vector3f;
+import org.joml.Vector3i;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
 import java.nio.ByteBuffer;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.util.ArrayList;
+
+import Geometry.*;
 
 /**
  * Implementation based on https://developer.nvidia.com/gpugems/GPUGems2/gpugems2_chapter37.html
@@ -35,11 +37,12 @@ public class SVO {
         this.maxDepth = maxDepth;
         this.worldSize = worldSize;
         this.geometries = new ArrayList<>();
-        this.indirectionPool = new ArrayList<>(1024);
+        this.indirectionPool = new ArrayList<>(8 * maxDepth * maxDepth);
     }
 
     public void generateDemoScene() {
-        geometries.add(new Sphere(new Vector3f(worldSize / 2f), worldSize / 4f, new Vector3f(0.5f, 0.5f, 0.5f)));
+        geometries.add(new Sphere(new Vector3f(worldSize / 2f), worldSize / 3f, new Vector3f(0.5f, 0.5f, 0.5f)));
+//        geometries.add(new Line(new Vector3f(worldSize / 4f, worldSize/ 4f, worldSize /3f), new Vector3f(worldSize / 3f)));
     }
 
     public void generateSVO() {
@@ -62,14 +65,22 @@ public class SVO {
      * @param indirectionGridIndex
      * @return
      */
-    protected Vector3f getTextureIndex(int indirectionGridIndex) {
+    protected Vector3f getNormalizedTextureIndex(int indirectionGridIndex) {
+        Vector3i i = getTextureIndex(indirectionGridIndex);
+        return new Vector3f(i).div((float) getMaxTextureSize());
+    }
+
+    protected Vector3i getTextureIndex(int indirectionGridIndex, Vector3i target) {
         int textureSize = getMaxTextureSize();
         int halfTextureSize = textureSize / 2;
-        int i = indirectionGridIndex;
-        int x = (i % halfTextureSize) * 2;
-        int y = ((i / halfTextureSize) % halfTextureSize) * 2;
-        int z = ((i / (halfTextureSize * halfTextureSize))) * 2;
-        return new Vector3f(x, y, z).div((float) textureSize);
+        int x = (indirectionGridIndex % halfTextureSize) * 2;
+        int y = ((indirectionGridIndex / halfTextureSize) % halfTextureSize) * 2;
+        int z = ((indirectionGridIndex / (halfTextureSize * halfTextureSize))) * 2;
+        target.set(x, y, z);
+        return target;
+    }
+    protected Vector3i getTextureIndex(int indirectionGridIndex) {
+        return getTextureIndex(indirectionGridIndex, new Vector3i());
     }
 
     /**
@@ -111,18 +122,14 @@ public class SVO {
 
                     // Create a link from the child node to the next indirection grid
                     // The texture index is the IG at current pool index + 1, which is the size()
-                    Vector3f textureIndex = getTextureIndex(newIGIndex);
+                    Vector3f textureIndex = getNormalizedTextureIndex(newIGIndex);
                     ig.setNode(i, Cell.createIndex(textureIndex));
                 }
             } else {
                 // If at max depth, possibly add a data node
                 if (intersection != null) {
                     // Create a data node with the color of the geometry
-                    Vector3f color = new Vector3f(intersection.getColor());
-//                    color.add(
-//                            new Vector3f((float) Math.random(), (float) Math.random(), (float) Math.random())
-//                                    .sub(new Vector3f(0.5f))
-//                                    .mul(0.5f));
+                    Vector3f color = new Vector3f(); // intersection.getColor()
                     color.set(childBoxStart).div(worldSize);
                     ig.setNode(i, Cell.createData(color));
                 }
@@ -140,7 +147,7 @@ public class SVO {
         int n = (int) Math.pow(2, maxDepth);
         int logN = (int) Math.log(n);
         int textureSize = n + logN;
-        textureSize /= 2; // Todo: Assumption that 3/4 of the space is empty, may break stuff
+        textureSize /= 2; // Todo: Assumption that 1/2 of the space is empty, may break stuff
         return nextPowerOfTwo(textureSize);
     }
 
@@ -166,23 +173,16 @@ public class SVO {
 //        int size = getMaxTextureSize();
         ByteBuffer textureData = BufferUtils.createByteBuffer(textureSize * textureSize * textureSize * 4); // 4 bytes since r g b a
 
-        // Half texture size since each cell is 2x2x2, so in each dimension it takes up 2 spaces
-        int halfTextureSize = textureSize / 2;
-        int x = 0, y = 0, z = 0;
+        Vector3i index = new Vector3i();
         for (int i = 0; i < indirectionPool.size(); i++) {
-            x = (i % halfTextureSize) * 2;
-            y = ((i / halfTextureSize) % halfTextureSize) * 2;
-            z = ((i / (halfTextureSize * halfTextureSize))) * 2;
-
-//            System.out.println("Indir Grid " + i + " loc: " + x + ", " + y + ", " + z + " -> " + getTextureIndex(i).toString(new DecimalFormat("0.00")));
+            getTextureIndex(i, index);
 
             // Insert pool cells in a cube in texture memory
-            indirectionPool.get(i).get(textureSize, x, y, z, textureData);
+            indirectionPool.get(i).get(textureSize, index.x, index.y, index.z, textureData);
         }
 
-        int bytesLeft = textureData.limit() - IndirectionGrid.getTextureIndex(textureSize, x, y, z, 7);
+        int bytesLeft = textureData.limit() - IndirectionGrid.getTextureIndex(textureSize, index.x, index.y, index.z, 7);
         System.out.println("Bytes left: " + bytesLeft + "(=" + (bytesLeft / 4) / 8 + " left over IRs out of " + ((textureData.limit() / 4) / 8) + ")");
-//        textureData.flip();
         return textureData;
     }
 
@@ -195,9 +195,9 @@ public class SVO {
 //        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_LINEAR);
         GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_NEAREST);
         GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NEAREST);
-        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_WRAP_S, GL11.GL_REPEAT);
-        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_WRAP_T, GL11.GL_REPEAT);
-        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL12.GL_TEXTURE_WRAP_R, GL11.GL_REPEAT);
+        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_WRAP_S, GL12.GL_CLAMP_TO_EDGE);
+        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_WRAP_T, GL12.GL_CLAMP_TO_EDGE);
+        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL12.GL_TEXTURE_WRAP_R, GL12.GL_CLAMP_TO_EDGE);
         GL12.glTexImage3D(GL12.GL_TEXTURE_3D, 0, GL11.GL_RGBA, size, size, size, 0, GL11.GL_RGBA, GL11.GL_UNSIGNED_BYTE, textureData);
 
         return texID;

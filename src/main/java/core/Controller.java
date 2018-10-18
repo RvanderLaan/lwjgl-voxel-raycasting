@@ -20,8 +20,8 @@ public class Controller {
         this.camera = camera;
     }
 
-    Vector3f localTranslationTemp = new Vector3f();
-    Vector3f globalTranslationTemp = new Vector3f();
+    private Vector3f localTranslationTemp = new Vector3f();
+    private Vector3f globalTranslationTemp = new Vector3f();
 
     public void update(float dt) {
         localTranslationTemp.set(0);
@@ -54,12 +54,12 @@ public class Controller {
         camera.getPosition().add(globalTranslationTemp);
 
 
-        if (KeyboardHandler.isKeyDown(GLFW_KEY_Q)) {
-            camera.getRotation().rotateZ(-factor * dt);
-        }
-        if (KeyboardHandler.isKeyDown(GLFW_KEY_E)) {
-            camera.getRotation().rotateZ(factor * dt);
-        }
+//        if (KeyboardHandler.isKeyDown(GLFW_KEY_Q)) {
+//            camera.getRotation().rotateZ(-factor * dt);
+//        }
+//        if (KeyboardHandler.isKeyDown(GLFW_KEY_E)) {
+//            camera.getRotation().rotateZ(factor * dt);
+//        }
 
 
         if (MouseButtonHandler.isButtonDown(0)) {
