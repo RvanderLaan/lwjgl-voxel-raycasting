@@ -131,6 +131,7 @@ public class SVO {
                     // Create a data node with the color of the geometry
                     Vector3f color = new Vector3f(); // intersection.getColor()
                     color.set(childBoxStart).div(worldSize);
+//                    color.set((float) Math.random(), (float) Math.random(), (float) Math.random());
                     ig.setNode(i, Cell.createData(color));
                 }
             }
@@ -148,7 +149,11 @@ public class SVO {
         int logN = (int) Math.log(n);
         int textureSize = n + logN;
         textureSize /= 2; // Todo: Assumption that 1/2 of the space is empty, may break stuff
-        return nextPowerOfTwo(textureSize);
+
+        // Max texture size of 256 since index nodes can only point to 2^8=255 values along each axis
+        return Math.min(
+                nextPowerOfTwo(textureSize),
+                32);
     }
 
     private static int nextPowerOfTwo(int value) {
@@ -195,9 +200,9 @@ public class SVO {
 //        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_LINEAR);
         GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_NEAREST);
         GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NEAREST);
-        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_WRAP_S, GL12.GL_CLAMP_TO_EDGE);
-        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_WRAP_T, GL12.GL_CLAMP_TO_EDGE);
-        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL12.GL_TEXTURE_WRAP_R, GL12.GL_CLAMP_TO_EDGE);
+        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_WRAP_S, GL11.GL_REPEAT);
+        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_WRAP_T, GL11.GL_REPEAT);
+        GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL12.GL_TEXTURE_WRAP_R, GL11.GL_REPEAT);
         GL12.glTexImage3D(GL12.GL_TEXTURE_3D, 0, GL11.GL_RGBA, size, size, size, 0, GL11.GL_RGBA, GL11.GL_UNSIGNED_BYTE, textureData);
 
         return texID;

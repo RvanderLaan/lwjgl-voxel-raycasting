@@ -211,22 +211,42 @@ public class Launcher {
         initComputeProgram();
         createQuadProgram();
         initQuadProgram();
-        createVoxelTexture();
+        SVO svo = createVoxelTexture();
+        setStaticUniforms(svo);
 
         controller = new Controller(camera);
         renderController = new RenderController(computeShader, RenderController.LookupMode.OCTREE);
     }
 
-    private void createVoxelTexture() {
+    private void setStaticUniforms(SVO svo) {
+        float texSize = svo.getMaxTextureSize();
+
+        glUseProgram(computeProgram);
+
+        // Set number of indirection grids
+        glUniform1f(computeShader.getUniformId("invNumberOfIndGrids"), 2f / texSize);
+
+        // Set voxel texture size
+        glUniform3f(
+                computeShader.getUniformId("textureSize"),
+                texSize,
+                1 / texSize,
+                1 / (2 * texSize)
+        );
+
+        glUseProgram(0);
+    }
+
+    private SVO createVoxelTexture() {
         SVO svo = new SVO(4, 100);
         int textureSize = svo.getMaxTextureSize();
         System.out.println("Texture size: " + textureSize + "^3");
         svo.generateDemoScene();
         svo.generateSVO();
-        invNumberOfIndGrids = 2f / (float) textureSize;
         System.out.println("invNumberOfIndGrids = " + invNumberOfIndGrids + " -> " + 1 / invNumberOfIndGrids);
 //        System.out.println("textureSize + \", \" + invNumberOfIndGrids = " + textureSize + ", " + invNumberOfIndGrids);
         voxelTexture = SVO.uploadTexture(textureSize, svo.getTextureData());
+        return svo;
     }
 
     private void update(float dt) {
@@ -429,8 +449,7 @@ public class Launcher {
         glUniform3f(computeShader.getUniformId("ray11"),
                 tmpVector.x, tmpVector.y, tmpVector.z);
 
-        // Set voxel texture size
-        glUniform1f(computeShader.getUniformId("invNumberOfIndGrids"), invNumberOfIndGrids);
+
         // Set voxel texture location (TEXTURE0)
         glUniform1i(computeShader.getUniformId("voxelTexture"), 0);
 
