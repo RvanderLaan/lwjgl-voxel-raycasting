@@ -76,21 +76,22 @@ public class Launcher {
      * on the screen. */
     private int sampler;
 
+    private Shader computeShader;
+
     /** The texture containing the voxelized data structure */
     private int voxelTexture;
-    private int invNumberOfIndGridsUniform;
+    /** Inverse of the number of incirection grids, used for traversing the octree */
     private float invNumberOfIndGrids;
 
     /** The location of the 'eye' uniform declared in the compute shader holding the
      * world-space eye position. */
-    private int eyeUniform;
+//    private int eyeUniform;
     /** The location of the rayNN uniforms. These will be explained later. */
-    private int ray00Uniform, ray10Uniform, ray01Uniform, ray11Uniform;
+//    private int ray00Uniform, ray10Uniform, ray01Uniform, ray11Uniform;
 
     /** The binding point in the compute shader of the framebuffer image (level 0 of
      * the {@link #tex} texture). */
     private int framebufferImageBinding;
-    private int voxelTextureUniform;
     /** Value of the work group size in X dimension declared in the compute shader. */
     private int workGroupSizeX;
     /** Value of the work group size in Y dimension declared in the compute shader. */
@@ -103,6 +104,7 @@ public class Launcher {
 
     private Camera camera;
     private Controller controller;
+    private RenderController renderController;
 
     /*
      * All the GLFW callbacks we use to detect certain events, such as keyboard and
@@ -200,7 +202,6 @@ public class Launcher {
         debugProc = GLUtil.setupDebugMessageCallback();
 
         camera = new Camera(new Vector3f(0.5f, 0.5f, 0.05f));
-        controller = new Controller(camera);
 
         /* Create all needed GL resources */
         createFramebufferTexture();
@@ -210,19 +211,42 @@ public class Launcher {
         initComputeProgram();
         createQuadProgram();
         initQuadProgram();
-        createVoxelTexture();
+        SVO svo = createVoxelTexture();
+        setStaticUniforms(svo);
+
+        controller = new Controller(camera);
+        renderController = new RenderController(computeShader, RenderController.LookupMode.OCTREE);
     }
 
-    private void createVoxelTexture() {
-        SVO svo = new SVO(6, 100);
+    private void setStaticUniforms(SVO svo) {
+        float texSize = svo.getMaxTextureSize();
+
+        glUseProgram(computeProgram);
+
+        // Set number of indirection grids
+        glUniform1f(computeShader.getUniformId("invNumberOfIndGrids"), 2f / texSize);
+
+        // Set voxel texture size
+        glUniform3f(
+                computeShader.getUniformId("textureSize"),
+                texSize,
+                1 / texSize,
+                1 / (2 * texSize)
+        );
+
+        glUseProgram(0);
+    }
+
+    private SVO createVoxelTexture() {
+        SVO svo = new SVO(4, 100);
         int textureSize = svo.getMaxTextureSize();
         System.out.println("Texture size: " + textureSize + "^3");
         svo.generateDemoScene();
         svo.generateSVO();
-        invNumberOfIndGrids = 2f / (float) textureSize;
         System.out.println("invNumberOfIndGrids = " + invNumberOfIndGrids + " -> " + 1 / invNumberOfIndGrids);
 //        System.out.println("textureSize + \", \" + invNumberOfIndGrids = " + textureSize + ", " + invNumberOfIndGrids);
         voxelTexture = SVO.uploadTexture(textureSize, svo.getTextureData());
+        return svo;
     }
 
     private void update(float dt) {
@@ -231,7 +255,9 @@ public class Launcher {
         }
 
         controller.update(dt);
+        renderController.update(dt);
 
+        // Reset raw input controllers
         KeyboardHandler.update();
         MouseButtonHandler.update();
 
@@ -311,6 +337,7 @@ public class Launcher {
             throw new AssertionError("Could not link program");
         }
         this.computeProgram = program;
+        this.computeShader = new Shader(computeProgram);
     }
 
     /** Initialize the full-screen-quad program. This just binds the program briefly
@@ -331,11 +358,6 @@ public class Launcher {
         glGetProgramiv(computeProgram, GL_COMPUTE_WORK_GROUP_SIZE, workGroupSize);
         workGroupSizeX = workGroupSize.get(0);
         workGroupSizeY = workGroupSize.get(1);
-        eyeUniform = glGetUniformLocation(computeProgram, "eye");
-        ray00Uniform = glGetUniformLocation(computeProgram, "ray00");
-        ray10Uniform = glGetUniformLocation(computeProgram, "ray10");
-        ray01Uniform = glGetUniformLocation(computeProgram, "ray01");
-        ray11Uniform = glGetUniformLocation(computeProgram, "ray11");
 
         /* Query the "image binding point" of the image uniform */
         IntBuffer params = BufferUtils.createIntBuffer(1);
@@ -345,11 +367,6 @@ public class Launcher {
 
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_3D, voxelTexture);
-
-        voxelTextureUniform = glGetUniformLocation(computeProgram, "voxelTexture");
-
-        invNumberOfIndGridsUniform = glGetUniformLocation(computeProgram, "invNumberOfIndGrids");
-
         glUseProgram(0);
     }
 
@@ -417,20 +434,24 @@ public class Launcher {
          * compute the direction from the eye through a framebuffer's pixel center for a
          * given shader work item.
          */
-        glUniform3f(eyeUniform, camera.getPosition().x, camera.getPosition().y, camera.getPosition().z);
+        glUniform3f(computeShader.getUniformId("eye"),
+                camera.getPosition().x, camera.getPosition().y, camera.getPosition().z);
         invViewProjMatrix.transformProject(tmpVector.set(-1, -1, 0)).sub(camera.getPosition());
-        glUniform3f(ray00Uniform, tmpVector.x, tmpVector.y, tmpVector.z);
+        glUniform3f(computeShader.getUniformId("ray00"),
+                tmpVector.x, tmpVector.y, tmpVector.z);
         invViewProjMatrix.transformProject(tmpVector.set(-1, 1, 0)).sub(camera.getPosition());
-        glUniform3f(ray01Uniform, tmpVector.x, tmpVector.y, tmpVector.z);
+        glUniform3f(computeShader.getUniformId("ray01"),
+                tmpVector.x, tmpVector.y, tmpVector.z);
         invViewProjMatrix.transformProject(tmpVector.set(1, -1, 0)).sub(camera.getPosition());
-        glUniform3f(ray10Uniform, tmpVector.x, tmpVector.y, tmpVector.z);
+        glUniform3f(computeShader.getUniformId("ray10"),
+                tmpVector.x, tmpVector.y, tmpVector.z);
         invViewProjMatrix.transformProject(tmpVector.set(1, 1, 0)).sub(camera.getPosition());
-        glUniform3f(ray11Uniform, tmpVector.x, tmpVector.y, tmpVector.z);
+        glUniform3f(computeShader.getUniformId("ray11"),
+                tmpVector.x, tmpVector.y, tmpVector.z);
 
-        // Set voxel texture size
-        glUniform1f(invNumberOfIndGridsUniform, invNumberOfIndGrids);
+
         // Set voxel texture location (TEXTURE0)
-        glUniform1i(voxelTextureUniform, 0);
+        glUniform1i(computeShader.getUniformId("voxelTexture"), 0);
 
         /*
          * Bind level 0 of framebuffer texture as writable image in the shader. This
