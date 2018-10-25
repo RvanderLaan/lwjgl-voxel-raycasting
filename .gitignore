@@ -28,3 +28,9 @@ target/
 # IntelliJ
 .idea/
 *.iml
+
+# maven / vscode
+.classpath
+.factorypath
+.project
+.settings/

@@ -7,6 +7,9 @@
     <groupId>org.tharemo.voxels</groupId>
     <artifactId>voxels</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+   
+
     <build>
         <plugins>
             <plugin>
@@ -17,14 +20,60 @@
                     <target>8</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.4.1</version>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>       
+                    <archive>
+                        <manifest>
+                        <mainClass>core.Launcher</mainClass>
+                        </manifest>
+                    </archive>
+                    </configuration>
+                    <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                        <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
-    <properties>
-        <lwjgl.version>3.2.0</lwjgl.version>
-        <joml.version>1.9.11</joml.version>
-        <lwjgl.natives>natives-windows</lwjgl.natives>
-    </properties>
+
+    <!-- Platform specific natives -->
+    <profiles>
+        <profile>
+            <activation>
+                <os><family>Windows</family></os>
+            </activation>
+            <properties>
+                <lwjgl.version>3.2.0</lwjgl.version>
+                <joml.version>1.9.11</joml.version>
+                <lwjgl.natives>natives-windows</lwjgl.natives>
+            </properties>
+        </profile>
+        <profile>
+            <activation>
+                <os><family>unix</family></os>
+            </activation>
+            <properties>
+                <lwjgl.version>3.2.0</lwjgl.version>
+                <joml.version>1.9.11</joml.version>
+                <lwjgl.natives>natives-linux</lwjgl.natives>
+            </properties>
+        </profile>
+        
+    </profiles>
+  
 
     <dependencies>
         <dependency>
@@ -163,7 +212,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.12</version>
+            <version>1.16.22</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
