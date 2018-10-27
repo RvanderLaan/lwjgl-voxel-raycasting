@@ -39,17 +39,17 @@ uniform int lookupMode = 1;
  * Describes an axis-aligned box by its minimum and maximum corner
  * oordinates.
  */
-struct box {
+struct Box {
   vec3 min, max;
 };
 
-const box unitBox = {vec3(0), vec3(1)};
+const Box unitBox = {vec3(0), vec3(1)};
 
 /**
  * Our scene description is very simple. We just use a static array
  * of boxes, each defined by its minimum and maximum corner coordinates.
  */
-const box boxes[NUM_BOXES] = {
+const Box boxes[NUM_BOXES] = {
   {vec3(-5.0, -0.1, -5.0), vec3(5.0, 0.0, 5.0)}, // <- bottom
   {vec3(-5.1, 0.0, -5.0), vec3(-5.0, 5.0, 5.0)}, // <- left
   {vec3(5.0, 0.0, -5.0), vec3(5.1, 5.0, 5.0)},   // <- right
@@ -62,10 +62,22 @@ const box boxes[NUM_BOXES] = {
   {vec3(0.8, 0.0,  0.8), vec3(1.0, 1.0, 1.0)}   // <- table foot
 };
 
+// The offset each child box has
+const vec3 childBoxOffsets[8] = {
+    vec3(0,     0,      0),
+    vec3(1,   0,      0),
+    vec3(0,     1,    0),
+    vec3(1,   1,    0),
+    vec3(0,     0,      1),
+    vec3(1,   0,      1),
+    vec3(0,     1,    1),
+    vec3(1,   1,    1),
+};
+
 /**
  * Describes the first intersection of a ray with a box.
  */
-struct hitinfo {
+struct HitInfo {
   /*
    * The value of the parameter 't' in the ray equation
    * `p = origin + dir * t` at which p is a point on one of the boxes
@@ -84,7 +96,7 @@ struct hitinfo {
  * enters and exists the box, called (tNear, tFar). If there is no
  * intersection then tNear > tFar or tFar < 0.
  */
-vec2 intersectBox(vec3 origin, vec3 dir, const box b) {
+vec2 intersectBox(vec3 origin, vec3 dir, const Box b) {
   vec3 tMin = (b.min - origin) / dir;
   vec3 tMax = (b.max - origin) / dir;
   vec3 t1 = min(tMin, tMax);
@@ -100,7 +112,7 @@ vec2 intersectBox(vec3 origin, vec3 dir, const box b) {
  * store the value of 't' at the intersection as well as the index of
  * the intersected box into the out-parameter 'info'.
  */
-bool intersectBoxes(vec3 origin, vec3 dir, out hitinfo info) {
+bool intersectBoxes(vec3 origin, vec3 dir, out HitInfo info) {
   float smallest = LARGE_FLOAT;
   bool found = false;
   for (int i = 0; i < NUM_BOXES; i++) {
@@ -136,34 +148,57 @@ float random(vec3 f) {
   return uintBitsToFloat((h & mantissaMask) | one) - 1.0;
 }
 
+
+
+struct Cell {
+    vec3 boxStart, boxEnd;
+    vec4 data;
+};
+
 /**
  * Based on https://developer.nvidia.com/gpugems/GPUGems2/gpugems2_chapter37.html
  */
-vec4 treeLookup(vec3 m) {
-    vec4 cell = vec4(0.0, 0.0, 0.0, 0.0);
+Cell treeLookup(vec3 m) {
+    vec4 cellData = vec4(0.0, 0.0, 0.0, 0.0);
     vec3 p;
     float pow2 = 1.0;
 
+    vec3 boxStart = vec3(0);
+
+    float depth = 0;
+
     for (float i = 0; i < HRDWTREE_MAX_DEPTH; i++) { // fixed # of iterations
         // already in a leaf?
-        if (cell.w < 0.9) {
+        if (cellData.w < 0.9) {
             // compute lookup coords. within current node
             // fract(m * pow2) gets the relative lookup position in the current node (cell.xyz)
-            p = cell.xyz + fract(m * pow2) * invNumberOfIndGrids;
-//            p = floor(p * 32) * 1 / 32.0 + 1 / 64.0;
+            vec3 localOffset = fract(m * pow2);
+            p = cellData.xyz + localOffset * invNumberOfIndGrids;
+
             // continue to next depth
-            cell = texture(voxelTexture, p); // maybe offset slightly? + vec3(0.05));
+            cellData = texture(voxelTexture, p); // maybe offset slightly? + vec3(0.05));
+
+            // if the cell is an index node, the leaf box is in a different position
+            // the local offset points to a point in space between [0, 1]^3
+            ivec3 iLocalOffset = ivec3(localOffset * 2); // map [0, 1) range to floored [0, 1]
+            int localOffsetIndex = iLocalOffset.x + 2 * iLocalOffset.y + 4 * iLocalOffset.z;
+
+            pow2 *= 2.0;
+            boxStart += childBoxOffsets[localOffsetIndex] / pow2;
         }
 
-        if (cell.w > 0.9)    // a leaf has been reached
+        // Check properties of new cell:
+        if (cellData.w > 0.9)    // a leaf has been reached
+            break;
+        if (cellData.w < 0.1)   // empty cell
             break;
 
-        if (cell.w < 0.1) // empty cell
-            return vec4(0);
-
-         pow2 *= 2.0;
     }
-    return cell;
+    Cell res;
+    res.boxStart = boxStart;
+    res.boxEnd = boxStart + vec3(1 / pow2);
+    res.data = cellData;
+    return res;
 }
 
 bool isInUnitCube(vec3 lookup) {
@@ -189,6 +224,7 @@ vec4 trace(vec3 origin, vec3 dir) {
         lookup += dir * unitBoxIntersection.x * 1.001;
     }
 
+/*
 //    float textureSize = 16.0;
 //    float voxelSize = 1 / textureSize;
 //    // Todo: Intersect with cells at deepest depth instead of brute forcing samples
@@ -227,15 +263,15 @@ vec4 trace(vec3 origin, vec3 dir) {
 //            return cell.rgb;
 //    }
 //    return vec3(0);
-
+*/
 
     ////////////////////////////////////////////////////////////
     // Quick n dirty implementation for now:
     // Do several lookups along rays from the camera viewpoint
-    vec4 cell;
+    Cell cell;
     float lookupDist = 0.001;
     for (int i = 0;
-        isInUnitCube(lookup);
+        i < 16 && isInUnitCube(lookup);
         i++) {
 
         // Look up the color in the middle of the voxel at the 'lookup' position, else you get artifacts
@@ -244,21 +280,31 @@ vec4 trace(vec3 origin, vec3 dir) {
         if (lookupMode == 1) {
             // Look up the value that the current cell is pointing to
             cell = treeLookup(roundedLookup);
-        } else if (lookupMode == 2) {
-            // Use this instead to look at the 3d volume texture directly
-            cell = texture(voxelTexture, roundedLookup);
-        } else {
-            // Use this instead to look up a color and use it as a lookup
-            vec3 lookup2 = texture(voxelTexture, lookup).rgb;
-            cell = texture(voxelTexture, lookup2);
+
+            // Intersect with the box that was found at the lookup position.
+            // Next lookup is beyond the second intersection point
+            Box childBox = {cell.boxStart, cell.boxEnd};
+            vec2 childBoxIntersection = intersectBox(lookup, dir, childBox);
+            lookup += dir * childBoxIntersection.y * 1.0001; // smaller value = thicker black lines :D
         }
+        else if (lookupMode == 2) {
+            // Use this instead to look at the 3d volume texture directly
+            cell.data = texture(voxelTexture, roundedLookup);
+            lookupDist *= 1.05;
+            lookup += dir * lookupDist; // Larger steps further from the camera
+        }
+//        else {
+//            // Use this instead to look up a color and use it as a lookup
+//            vec3 lookup2 = texture(voxelTexture, lookup).rgb;
+//            cell = texture(voxelTexture, lookup2);
+//        }
 
         // If it's not and empty cell, return its color
-        if (cell.w != 0)
-            return cell;
+        if (cell.data.w != 0)
+            return cell.data;
 
-        lookupDist *= 1.01;
-        lookup += dir * lookupDist; // Larger steps further from the camera
+//        lookupDist *= 1.01;
+//        lookup += dir * lookupDist; // Larger steps further from the camera
 //        lookup += dir * lookupDist * (random(lookup) + 0.01); // noisy borders
     }
     // If no lookup succeeds, return a background color

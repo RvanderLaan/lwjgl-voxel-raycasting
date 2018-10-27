@@ -236,7 +236,7 @@ public class Launcher {
     }
 
     private SVO createVoxelTexture() {
-        SVO svo = new SVO(6, 100);
+        SVO svo = new SVO(4, 100);
         int textureSize = svo.getMaxTextureSize();
         svo.generateDemoScene();
         svo.generateSVO();
@@ -509,7 +509,9 @@ public class Launcher {
             // ...we just poll for GLFW window events (as usual).
             glfwPollEvents();
 
-            update(dt); // todo: measure delta time
+            update(dt);
+
+            long renderStart = System.nanoTime();
 
             // Tell OpenGL about any possibly modified viewport size.
             glViewport(0, 0, width, height);
@@ -522,6 +524,9 @@ public class Launcher {
             // Tell the GLFW window to swap buffers so that our rendered framebuffer texture
             // becomes visible.
             glfwSwapBuffers(window);
+
+//            float renderTime = (System.nanoTime() - renderStart) / 1e9f;
+//            System.out.println("renderTime = " + renderTime + "ms");
 
             long nanoNow = System.nanoTime();
             dt = (nanoNow - nanoStart) / 1e9f;
