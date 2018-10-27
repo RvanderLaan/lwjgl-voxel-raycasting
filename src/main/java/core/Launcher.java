@@ -80,8 +80,6 @@ public class Launcher {
 
     /** The texture containing the voxelized data structure */
     private int voxelTexture;
-    /** Inverse of the number of incirection grids, used for traversing the octree */
-    private float invNumberOfIndGrids;
 
     /** The location of the 'eye' uniform declared in the compute shader holding the
      * world-space eye position. */
@@ -214,7 +212,7 @@ public class Launcher {
         SVO svo = createVoxelTexture();
         setStaticUniforms(svo);
 
-        controller = new Controller(camera);
+        controller = new Controller(camera, svo);
         renderController = new RenderController(computeShader, RenderController.LookupMode.OCTREE);
     }
 
@@ -231,19 +229,17 @@ public class Launcher {
                 computeShader.getUniformId("textureSize"),
                 texSize,
                 1 / texSize,
-                1 / (2 * texSize)
+                1 / (2f * texSize)
         );
 
         glUseProgram(0);
     }
 
     private SVO createVoxelTexture() {
-        SVO svo = new SVO(4, 100);
+        SVO svo = new SVO(6, 100);
         int textureSize = svo.getMaxTextureSize();
-        System.out.println("Texture size: " + textureSize + "^3");
         svo.generateDemoScene();
         svo.generateSVO();
-        System.out.println("invNumberOfIndGrids = " + invNumberOfIndGrids + " -> " + 1 / invNumberOfIndGrids);
 //        System.out.println("textureSize + \", \" + invNumberOfIndGrids = " + textureSize + ", " + invNumberOfIndGrids);
         voxelTexture = SVO.uploadTexture(textureSize, svo.getTextureData());
         return svo;

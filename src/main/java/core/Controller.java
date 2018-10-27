@@ -12,12 +12,14 @@ import static org.lwjgl.glfw.GLFW.GLFW_KEY_SPACE;
 
 public class Controller {
     private Camera camera;
+    private SVO svo;
 
     private Vector2f prevCursorPos = new Vector2f();
     private Vector2f mouseSensitivity = new Vector2f(1);
 
-    public Controller(Camera camera) {
+    public Controller(Camera camera, SVO svo) {
         this.camera = camera;
+        this.svo = svo;
     }
 
     private Vector3f localTranslationTemp = new Vector3f();
@@ -71,5 +73,17 @@ public class Controller {
         }
 
         prevCursorPos.set(CursorHandler.getCursorPos());
+
+
+
+
+
+        // Gravity: check voxel below camera
+//        Vector3f m = camera.getPosition().sub(0, 1/(float) svo.getMaxTextureSize(), 0, new Vector3f());
+//        IndirectionGrid lookup = svo.getIndirectionPool().get(0);
+//        for (int i = 0; i < svo.getMaxDepth(); i++) {
+//
+//            lookup = svo.getIndirectionPool().get()
+//        }
     }
 }

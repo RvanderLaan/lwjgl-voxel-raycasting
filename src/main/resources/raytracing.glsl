@@ -150,6 +150,7 @@ vec4 treeLookup(vec3 m) {
             // compute lookup coords. within current node
             // fract(m * pow2) gets the relative lookup position in the current node (cell.xyz)
             p = cell.xyz + fract(m * pow2) * invNumberOfIndGrids;
+//            p = floor(p * 32) * 1 / 32.0 + 1 / 64.0;
             // continue to next depth
             cell = texture(voxelTexture, p); // maybe offset slightly? + vec3(0.05));
         }
@@ -160,7 +161,7 @@ vec4 treeLookup(vec3 m) {
         if (cell.w < 0.1) // empty cell
             return vec4(0);
 
-         pow2 *= 2;
+         pow2 *= 2.0;
     }
     return cell;
 }
@@ -248,7 +249,7 @@ vec4 trace(vec3 origin, vec3 dir) {
             cell = texture(voxelTexture, roundedLookup);
         } else {
             // Use this instead to look up a color and use it as a lookup
-            vec3 lookup2 = texture(voxelTexture, roundedLookup).rgb;
+            vec3 lookup2 = texture(voxelTexture, lookup).rgb;
             cell = texture(voxelTexture, lookup2);
         }
 
@@ -256,7 +257,7 @@ vec4 trace(vec3 origin, vec3 dir) {
         if (cell.w != 0)
             return cell;
 
-        lookupDist *= 1.002;
+        lookupDist *= 1.01;
         lookup += dir * lookupDist; // Larger steps further from the camera
 //        lookup += dir * lookupDist * (random(lookup) + 0.01); // noisy borders
     }

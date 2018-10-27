@@ -1,4 +1,4 @@
-package Geometry;
+package geometry;
 
 import lombok.Getter;
 import lombok.NonNull;

@@ -1,6 +1,6 @@
 package core;
 
-import Geometry.Geometry;
+import geometry.Geometry;
 import lombok.Getter;
 import org.joml.Vector3f;
 import org.joml.Vector3i;
@@ -11,7 +11,7 @@ import org.lwjgl.opengl.GL12;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 
-import Geometry.*;
+import geometry.*;
 
 /**
  * Implementation based on https://developer.nvidia.com/gpugems/GPUGems2/gpugems2_chapter37.html
@@ -77,6 +77,7 @@ public class SVO {
         int y = ((indirectionGridIndex / halfTextureSize) % halfTextureSize) * 2;
         int z = ((indirectionGridIndex / (halfTextureSize * halfTextureSize))) * 2;
         target.set(x, y, z);
+//        System.out.println(target.toString());
         return target;
     }
     protected Vector3i getTextureIndex(int indirectionGridIndex) {
@@ -99,6 +100,9 @@ public class SVO {
         int currentIGIndex = indirectionPool.size();
         IndirectionGrid ig = new IndirectionGrid();
         indirectionPool.add(ig);
+
+        // Todo: Put actual texture index in Index Nodes afterwards,
+        // so that the texture size can be adjusted to the amount of indir nodes
 
         // The size of a child box is worldSize / 2^D, e.g. 1 -> 0.5 -> 0.25 -> 0.125 -> ...
         float childBoxSize = worldSize / (float) Math.pow(2, depth + 1);
@@ -153,7 +157,7 @@ public class SVO {
         // Max texture size of 256 since index nodes can only point to 2^8=255 values along each axis
         return Math.min(
                 nextPowerOfTwo(textureSize),
-                32);
+                128);
     }
 
     private static int nextPowerOfTwo(int value) {
@@ -169,10 +173,10 @@ public class SVO {
         // 8 values in a row as is happening now
 
 //        System.out.println("Generating texture...");
-        System.out.println("max depth: " + maxDepth + ", " + "indirectionPool size: " + indirectionPool.size());
+        System.out.println("Max depth: " + maxDepth + ", IndirectionPool size: " + indirectionPool.size());
 
         int textureSize = getMaxTextureSize();
-        System.out.println("textureSize: " + textureSize + "^3 = " + (int) Math.pow(textureSize, 3));
+        System.out.println("Texture Size: " + textureSize + "^3 = " + (int) Math.pow(textureSize, 3));
 
         // In a worst case scenario, all octree nodes are used, so the tree is subdivided to maxDepth everywhere
 //        int size = getMaxTextureSize();
@@ -186,8 +190,8 @@ public class SVO {
             indirectionPool.get(i).get(textureSize, index.x, index.y, index.z, textureData);
         }
 
-        int bytesLeft = textureData.limit() - IndirectionGrid.getTextureIndex(textureSize, index.x, index.y, index.z, 7);
-        System.out.println("Bytes left: " + bytesLeft + "(=" + (bytesLeft / 4) / 8 + " left over IRs out of " + ((textureData.limit() / 4) / 8) + ")");
+        int bytesUsed = IndirectionGrid.getTextureIndex(textureSize, index.x, index.y, index.z, 7);
+        System.out.println("Cells used: " + (bytesUsed / 4) / 8 + "/" + ((textureData.limit() / 4) / 8) + " (" + Math.round(100 * bytesUsed / (float) textureData.limit()) + "%)");
         return textureData;
     }
 

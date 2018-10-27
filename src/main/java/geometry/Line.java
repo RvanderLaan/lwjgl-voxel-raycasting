@@ -1,4 +1,4 @@
-package Geometry;
+package geometry;
 
 import lombok.AllArgsConstructor;
 import org.joml.Vector3f;

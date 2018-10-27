@@ -1,6 +1,7 @@
 package core;
 
-import Geometry.Sphere;
+import geometry.Plane;
+import geometry.Sphere;
 import org.joml.Vector3f;
 
 public class IntersectionUtils {
