@@ -17,6 +17,8 @@ public class Cell {
 
     private static Vector4f EMPTY_DATA = new Vector4f(0);
 
+    public Vector3f realLocation;
+
     private Cell(Vector4f data) {
         this.data = data;
     }
@@ -49,10 +51,10 @@ public class Cell {
             realData = EMPTY_DATA;
         }
 //        realData.get(position, buffer);
-        buffer.put(position + 0, (byte) Math.floor(realData.x * 255f));
-        buffer.put(position + 1, (byte) Math.floor(realData.y * 255f));
-        buffer.put(position + 2, (byte) Math.floor(realData.z * 255f));
-        buffer.put(position + 3, (byte) Math.floor(realData.w * 255f));
+        buffer.put(position + 0, (byte) ((int) Math.floor(realData.x * 255f) & 0xFF));
+        buffer.put(position + 1, (byte) ((int) Math.floor(realData.y * 255f) & 0xFF));
+        buffer.put(position + 2, (byte) ((int) Math.floor(realData.z * 255f) & 0xFF));
+        buffer.put(position + 3, (byte) ((int) Math.floor(realData.w * 255f) & 0xFF));
     }
 
     public static Cell createEmpty() {

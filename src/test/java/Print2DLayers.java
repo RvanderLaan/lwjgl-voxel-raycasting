@@ -10,12 +10,14 @@ import java.nio.file.Paths;
 
 public class Print2DLayers {
     public static void main(String[] args) {
-        SVO svo = new SVO(2, 100);
+        SVO svo = new SVO(5, 100);
         svo.generateDemoScene();
         svo.generateSVO();
         print(svo);
     }
     public static void print(SVO svo) {
+        byte testByte = (byte) Math.floor(1f * 255f - 128);
+        System.out.println("testByte = " + testByte);
 //        core.IndirectionGrid root = svo.getIndirectionPool().get(0);
 //
 //        int r = svo.getMaxDepth();
@@ -32,12 +34,18 @@ public class Print2DLayers {
 
         ByteBuffer textureData = svo.getTextureData();
         while (textureData.hasRemaining()) {
+            int lastByte = 0;
             for (int i = 0; i < 4; i++) {
                 byte b = textureData.get();
 //                String bits = String.format("%8s", Integer.toBinaryString(b & 0xFF)).replace(' ', '0');
-                stringBuffer.append(((int) b + 256) % 256 + "   \t");
+                stringBuffer.append((b & 0xFF) + "   \t");
+                lastByte = b & 0xFF;
             }
-            stringBuffer.append("\n");
+
+            String nodeType = Cell.NodeType.INDEX.toString();
+            if (lastByte == 0) nodeType = Cell.NodeType.EMPTY.toString();
+            else if (lastByte == 255) nodeType = Cell.NodeType.DATA.toString();
+            stringBuffer.append(nodeType + "\n");
         }
 
         Path path = Paths.get("./src/test/resources/octree-bytes.txt");

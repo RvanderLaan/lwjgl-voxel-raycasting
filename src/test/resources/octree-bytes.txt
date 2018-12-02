@@ -1,522 +1,4147 @@
+INDEX	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	
 INDEX	INDEX	INDEX	INDEX	INDEX	INDEX	INDEX	INDEX	
+EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	INDEX	
+EMPTY	EMPTY	EMPTY	INDEX	EMPTY	INDEX	INDEX	INDEX	
 EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	DATA	
+EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	DATA	
+EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	DATA	
+DATA	DATA	DATA	DATA	DATA	DATA	DATA	EMPTY	
+EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	INDEX	EMPTY	
+EMPTY	EMPTY	INDEX	EMPTY	INDEX	EMPTY	INDEX	INDEX	
 EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	DATA	EMPTY	
+EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	DATA	EMPTY	
+DATA	DATA	DATA	DATA	DATA	DATA	EMPTY	DATA	
+EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	DATA	EMPTY	
+EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	INDEX	EMPTY	EMPTY	
+EMPTY	INDEX	EMPTY	EMPTY	INDEX	INDEX	EMPTY	INDEX	
 EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	DATA	EMPTY	EMPTY	
+EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	DATA	EMPTY	EMPTY	
+DATA	DATA	DATA	DATA	DATA	EMPTY	DATA	DATA	
+EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	DATA	EMPTY	EMPTY	
+EMPTY	EMPTY	EMPTY	EMPTY	INDEX	EMPTY	EMPTY	EMPTY	
+INDEX	EMPTY	EMPTY	EMPTY	INDEX	INDEX	INDEX	EMPTY	
 EMPTY	EMPTY	EMPTY	EMPTY	DATA	EMPTY	EMPTY	EMPTY	
+DATA	DATA	DATA	DATA	EMPTY	DATA	DATA	DATA	
+EMPTY	EMPTY	EMPTY	EMPTY	DATA	EMPTY	EMPTY	EMPTY	
+EMPTY	EMPTY	EMPTY	EMPTY	DATA	EMPTY	EMPTY	EMPTY	
+EMPTY	EMPTY	EMPTY	INDEX	EMPTY	EMPTY	EMPTY	EMPTY	
+EMPTY	INDEX	INDEX	INDEX	EMPTY	EMPTY	EMPTY	INDEX	
 EMPTY	EMPTY	EMPTY	DATA	EMPTY	EMPTY	EMPTY	EMPTY	
+EMPTY	EMPTY	EMPTY	DATA	EMPTY	EMPTY	EMPTY	EMPTY	
+DATA	DATA	DATA	EMPTY	DATA	DATA	DATA	DATA	
+EMPTY	EMPTY	EMPTY	DATA	EMPTY	EMPTY	EMPTY	EMPTY	
+EMPTY	EMPTY	INDEX	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	
+INDEX	EMPTY	INDEX	INDEX	EMPTY	EMPTY	INDEX	EMPTY	
 EMPTY	EMPTY	DATA	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	
+DATA	DATA	EMPTY	DATA	DATA	DATA	DATA	DATA	
+EMPTY	EMPTY	DATA	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	
+EMPTY	EMPTY	DATA	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	
+EMPTY	INDEX	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	
+INDEX	INDEX	EMPTY	INDEX	EMPTY	INDEX	EMPTY	EMPTY	
 EMPTY	DATA	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	
+DATA	EMPTY	DATA	DATA	DATA	DATA	DATA	DATA	
+EMPTY	DATA	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	
+EMPTY	DATA	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	
+INDEX	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	
+INDEX	INDEX	INDEX	EMPTY	INDEX	EMPTY	EMPTY	EMPTY	
+EMPTY	DATA	DATA	DATA	DATA	DATA	DATA	DATA	
+DATA	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	
+DATA	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	
 DATA	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	EMPTY	
 
-63   	0   	0   	127   	
-127   	0   	0   	127   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-191   	0   	0   	127   	
-0   	63   	0   	127   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-127   	127   	127   	255   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-127   	127   	127   	255   	
-127   	127   	127   	255   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-127   	127   	127   	255   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-63   	63   	0   	127   	
-127   	63   	0   	127   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-127   	127   	127   	255   	
-191   	63   	0   	127   	
-0   	127   	0   	127   	
-0   	0   	0   	0   	
-127   	127   	127   	255   	
-127   	127   	127   	255   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-127   	127   	127   	255   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
-0   	0   	0   	0   	
+31   	0   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+63   	0   	0   	127   	INDEX
+0   	31   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+47   	47   	47   	255   	DATA
+55   	47   	47   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+191   	31   	0   	127   	INDEX
+127   	63   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+127   	0   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+47   	55   	47   	255   	DATA
+55   	55   	47   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+63   	47   	47   	255   	DATA
+71   	47   	47   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	63   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+63   	31   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+63   	55   	47   	255   	DATA
+71   	55   	47   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+47   	63   	47   	255   	DATA
+55   	63   	47   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+191   	63   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+63   	63   	47   	255   	DATA
+71   	63   	47   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+47   	71   	47   	255   	DATA
+55   	71   	47   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+63   	71   	47   	255   	DATA
+71   	71   	47   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+127   	95   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+47   	47   	63   	255   	DATA
+55   	47   	63   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+95   	95   	0   	127   	INDEX
+159   	95   	0   	127   	INDEX
+191   	95   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+55   	39   	63   	255   	DATA
+0   	0   	0   	0   	EMPTY
+39   	55   	63   	255   	DATA
+47   	55   	63   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+55   	55   	79   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+63   	127   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+63   	47   	63   	255   	DATA
+71   	47   	63   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+223   	127   	0   	127   	INDEX
+0   	159   	0   	127   	INDEX
+31   	159   	0   	127   	INDEX
+31   	127   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+95   	127   	0   	127   	INDEX
+127   	127   	0   	127   	INDEX
+63   	39   	63   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+71   	55   	63   	255   	DATA
+79   	55   	63   	255   	DATA
+0   	0   	0   	0   	EMPTY
+63   	55   	79   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+63   	159   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+39   	63   	63   	255   	DATA
+47   	63   	63   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+55   	79   	63   	255   	DATA
+0   	0   	0   	0   	EMPTY
+55   	63   	79   	255   	DATA
+159   	159   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+191   	159   	0   	127   	INDEX
+223   	159   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+71   	63   	63   	255   	DATA
+79   	63   	63   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+47   	71   	63   	255   	DATA
+55   	71   	63   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	191   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+63   	71   	63   	255   	DATA
+71   	71   	63   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+63   	79   	63   	255   	DATA
+0   	0   	0   	0   	EMPTY
+63   	63   	79   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+63   	95   	0   	127   	INDEX
+0   	127   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+159   	0   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+47   	47   	55   	255   	DATA
+55   	47   	55   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+191   	127   	0   	127   	INDEX
+127   	159   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+95   	0   	0   	127   	INDEX
+191   	0   	0   	127   	INDEX
+223   	0   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+55   	55   	39   	255   	DATA
+0   	0   	0   	0   	EMPTY
+55   	39   	55   	255   	DATA
+0   	0   	0   	0   	EMPTY
+39   	55   	55   	255   	DATA
+47   	55   	55   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+95   	31   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+63   	47   	55   	255   	DATA
+71   	47   	55   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+223   	31   	0   	127   	INDEX
+31   	63   	0   	127   	INDEX
+63   	63   	0   	127   	INDEX
+31   	31   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+127   	31   	0   	127   	INDEX
+159   	31   	0   	127   	INDEX
+63   	55   	39   	255   	DATA
+0   	0   	0   	0   	EMPTY
+63   	39   	55   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+71   	55   	55   	255   	DATA
+79   	55   	55   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+95   	63   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+55   	63   	39   	255   	DATA
+0   	0   	0   	0   	EMPTY
+39   	63   	55   	255   	DATA
+47   	63   	55   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+55   	79   	55   	255   	DATA
+159   	63   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+223   	63   	0   	127   	INDEX
+0   	95   	0   	127   	INDEX
+63   	63   	39   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+71   	63   	55   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+47   	71   	55   	255   	DATA
+55   	71   	55   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+31   	95   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+63   	71   	55   	255   	DATA
+71   	71   	55   	255   	DATA
+79   	63   	55   	255   	DATA
+0   	0   	0   	0   	EMPTY
+63   	79   	55   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+47   	47   	71   	255   	DATA
+55   	47   	71   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+223   	95   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+47   	55   	71   	255   	DATA
+55   	55   	71   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+63   	47   	71   	255   	DATA
+71   	47   	71   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+95   	159   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+159   	127   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+63   	55   	71   	255   	DATA
+71   	55   	71   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+47   	63   	71   	255   	DATA
+55   	63   	71   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+31   	191   	0   	127   	INDEX
+0   	0   	0   	0   	EMPTY
+63   	63   	71   	255   	DATA
+71   	63   	71   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+47   	71   	71   	255   	DATA
+55   	71   	71   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+63   	71   	71   	255   	DATA
+71   	71   	71   	255   	DATA
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY
+0   	0   	0   	0   	EMPTY

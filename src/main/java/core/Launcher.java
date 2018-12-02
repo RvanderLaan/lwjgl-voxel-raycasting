@@ -8,6 +8,8 @@ import org.joml.Vector3f;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.glfw.*;
 import org.lwjgl.opengl.GL;
+import org.lwjgl.opengl.GL11;
+import org.lwjgl.opengl.GL12;
 import org.lwjgl.opengl.GLUtil;
 import org.lwjgl.system.Callback;
 import org.lwjgl.system.MemoryStack;
@@ -79,7 +81,7 @@ public class Launcher {
     private Shader computeShader;
 
     /** The texture containing the voxelized data structure */
-    private int voxelTexture;
+    private int voxelTexture, voxelTextureDirect;
 
     /** The location of the 'eye' uniform declared in the compute shader holding the
      * world-space eye position. */
@@ -119,6 +121,8 @@ public class Launcher {
      * certain events, such as OpenGL errors, warnings or merely information.
      */
     private Callback debugProc;
+
+    private SVO svo;
 
     public Launcher() {
     }
@@ -209,11 +213,11 @@ public class Launcher {
         initComputeProgram();
         createQuadProgram();
         initQuadProgram();
-        SVO svo = createVoxelTexture();
+        svo = createVoxelTexture();
         setStaticUniforms(svo);
 
         controller = new Controller(camera, svo);
-        renderController = new RenderController(computeShader, RenderController.LookupMode.OCTREE);
+        renderController = new RenderController(computeShader, RenderController.LookupMode.OCTREE, voxelTexture, voxelTextureDirect);
     }
 
     private void setStaticUniforms(SVO svo) {
@@ -242,6 +246,8 @@ public class Launcher {
         svo.generateSVO();
 //        System.out.println("textureSize + \", \" + invNumberOfIndGrids = " + textureSize + ", " + invNumberOfIndGrids);
         voxelTexture = SVO.uploadTexture(textureSize, svo.getTextureData());
+        voxelTextureDirect = SVO.uploadTexture(textureSize, svo.getNormalVolumeTextureData());
+        GL11.glBindTexture(GL12.GL_TEXTURE_3D, voxelTexture);
         return svo;
     }
 
@@ -259,6 +265,9 @@ public class Launcher {
 
         String camPosText = camera.getPosition().toString(new DecimalFormat("0.0"));
         glfwSetWindowTitle(window, "SVO Ray tracing - " + fps + " FPS - CamPos: " + camPosText);
+
+
+        setStaticUniforms(svo);
     }
 
     /** Create a VAO with a full-screen quad VBO.

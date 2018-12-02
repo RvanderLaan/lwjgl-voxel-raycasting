@@ -41,8 +41,11 @@ public class SVO {
     }
 
     public void generateDemoScene() {
-        geometries.add(new Sphere(new Vector3f(worldSize / 2f), worldSize / 3f, new Vector3f(0.5f, 0.5f, 0.5f)));
-//        geometries.add(new Line(new Vector3f(worldSize / 4f, worldSize/ 4f, worldSize /3f), new Vector3f(worldSize / 3f)));
+        geometries.add(new Sphere(new Vector3f(worldSize / 3f), worldSize / 4f, new Vector3f(0.5f, 0.5f, 0.5f)));
+        geometries.add(new Sphere(new Vector3f(worldSize / 6f), worldSize / 8f, new Vector3f(0.5f, 0.5f, 0.5f)));
+//        geometries.add(new Sphere(new Vector3f(3 * worldSize / 4f), worldSize / 3f, new Vector3f(0.5f, 0.5f, 0.5f)));
+//        geometries.add(new Sphere(new Vector3f(3 * worldSize / 4f, worldSize /4f, worldSize/4f), worldSize / 6f, new Vector3f(0.5f, 0.5f, 0.5f)));
+//        geometries.add(new Line(new Vector3f(.4f), new Vector3f(.4f, 0.4f, 0.5f)));
     }
 
     public void generateSVO() {
@@ -77,6 +80,11 @@ public class SVO {
         int y = ((indirectionGridIndex / halfTextureSize) % halfTextureSize) * 2;
         int z = ((indirectionGridIndex / (halfTextureSize * halfTextureSize))) * 2;
         target.set(x, y, z);
+
+//        if (x >= textureSize || y >= textureSize || z >= textureSize) {
+//            System.out.println("OOB: " + indirectionGridIndex + " at " + x + ", " + y + ", " + z);
+//        }
+
 //        System.out.println(target.toString());
         return target;
     }
@@ -133,10 +141,14 @@ public class SVO {
                 // If at max depth, possibly add a data node
                 if (intersection != null) {
                     // Create a data node with the color of the geometry
-                    Vector3f color = new Vector3f(); // intersection.getColor()
+                    Vector3f color = new Vector3f(intersection.getColor());
                     color.set(childBoxStart).div(worldSize);
 //                    color.set((float) Math.random(), (float) Math.random(), (float) Math.random());
-                    ig.setNode(i, Cell.createData(color));
+                    Cell cell = Cell.createData(color);
+                    ig.setNode(i, cell);
+
+                    cell.realLocation = new Vector3f(childBoxStart).div(worldSize);
+
                 }
             }
         }
@@ -149,6 +161,7 @@ public class SVO {
         // This means:
         // Every depth step, 2 new cells per dimension
         // for every data cell, log(N) index cells
+//        return 8;
         int n = (int) Math.pow(2, maxDepth);
         int logN = (int) Math.log(n);
         int textureSize = n + logN;
@@ -157,7 +170,7 @@ public class SVO {
         // Max texture size of 256 since index nodes can only point to 2^8=255 values along each axis
         return Math.min(
                 nextPowerOfTwo(textureSize),
-                128);
+                256);
     }
 
     private static int nextPowerOfTwo(int value) {
@@ -166,6 +179,27 @@ public class SVO {
             return value;
         }
         return highestOneBit << 1;
+    }
+
+    public ByteBuffer getNormalVolumeTextureData() {
+        int textureSize = getMaxTextureSize();
+        ByteBuffer textureData = BufferUtils.createByteBuffer(textureSize * textureSize * textureSize * 4); // 4 bytes since r g b a
+
+        for (int i = 0; i < indirectionPool.size(); i++) {
+            for (Cell cell : indirectionPool.get(i).getChildren()) {
+                if (cell.getNodeType() == Cell.NodeType.DATA) {
+                    Vector3f realLocation = cell.realLocation;
+                    realLocation.mul(textureSize);
+                    int textureIndex = (int) realLocation.x;
+                    textureIndex += (int) realLocation.y * textureSize;
+                    textureIndex += (int) realLocation.z * textureSize * textureSize;
+                    textureIndex *= 4;
+                    cell.getData(textureIndex, textureData);
+                }
+            }
+        }
+
+        return textureData;
     }
 
     public ByteBuffer getTextureData() {
@@ -190,8 +224,8 @@ public class SVO {
             indirectionPool.get(i).get(textureSize, index.x, index.y, index.z, textureData);
         }
 
-        int bytesUsed = IndirectionGrid.getTextureIndex(textureSize, index.x, index.y, index.z, 7);
-        System.out.println("Cells used: " + (bytesUsed / 4) / 8 + "/" + ((textureData.limit() / 4) / 8) + " (" + Math.round(100 * bytesUsed / (float) textureData.limit()) + "%)");
+        int bytesUsed = indirectionPool.size();
+        System.out.println("Cells used: " + bytesUsed + "/" + ((textureData.limit() / 4) / 8) + " (" + Math.round(100 * 4 * 8 * bytesUsed / (float) textureData.limit()) + "%)");
         return textureData;
     }
 
@@ -208,6 +242,8 @@ public class SVO {
         GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL11.GL_TEXTURE_WRAP_T, GL11.GL_REPEAT);
         GL11.glTexParameteri(GL12.GL_TEXTURE_3D, GL12.GL_TEXTURE_WRAP_R, GL11.GL_REPEAT);
         GL12.glTexImage3D(GL12.GL_TEXTURE_3D, 0, GL11.GL_RGBA, size, size, size, 0, GL11.GL_RGBA, GL11.GL_UNSIGNED_BYTE, textureData);
+
+        GL11.glBindTexture(GL12.GL_TEXTURE_3D, 0);
 
         return texID;
     }

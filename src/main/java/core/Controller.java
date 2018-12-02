@@ -17,6 +17,8 @@ public class Controller {
     private Vector2f prevCursorPos = new Vector2f();
     private Vector2f mouseSensitivity = new Vector2f(1);
 
+    private Vector3f eulerAngles = new Vector3f();
+
     public Controller(Camera camera, SVO svo) {
         this.camera = camera;
         this.svo = svo;
@@ -69,14 +71,15 @@ public class Controller {
             // If mouse is down, compute the camera rotation based on mouse cursor location.
 //            currRotationAboutY = rotationAboutY + (mouseX - mouseDownX) * 0.01f;
             camera.getRotation().rotateLocalY(-(CursorHandler.getCursorPos().x - prevCursorPos.x) * mouseSensitivity.x * dt);
-            camera.getRotation().rotateX((CursorHandler.getCursorPos().y - prevCursorPos.y) * mouseSensitivity.y * dt);
+
+            // Check if X axis rotation is allowed (not too far down or up)
+            camera.getRotation().getEulerAnglesXYZ(eulerAngles);
+            float addRotX = (CursorHandler.getCursorPos().y - prevCursorPos.y) * mouseSensitivity.y * dt;
+//            if (Math.abs(eulerAngles.x % (Math.PI / 2f) + addRotX) < Math.PI / 2f)
+                camera.getRotation().rotateX(addRotX);
         }
 
         prevCursorPos.set(CursorHandler.getCursorPos());
-
-
-
-
 
         // Gravity: check voxel below camera
 //        Vector3f m = camera.getPosition().sub(0, 1/(float) svo.getMaxTextureSize(), 0, new Vector3f());

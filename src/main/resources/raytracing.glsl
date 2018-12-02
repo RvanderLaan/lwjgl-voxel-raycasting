@@ -202,7 +202,7 @@ Cell treeLookup(vec3 m) {
 }
 
 bool isInUnitCube(vec3 lookup) {
-    return all(lessThanEqual(lookup, vec3(1))) && all(greaterThanEqual(lookup, vec3(0)));
+    return all(lessThan(lookup, vec3(1))) && all(greaterThanEqual(lookup, vec3(0)));
 }
 
 /**
@@ -271,10 +271,11 @@ vec4 trace(vec3 origin, vec3 dir) {
     Cell cell;
     float lookupDist = 0.001;
     for (int i = 0;
-        i < 16 && isInUnitCube(lookup);
+        i < 128 && isInUnitCube(lookup);
         i++) {
 
         // Look up the color in the middle of the voxel at the 'lookup' position, else you get artifacts
+        // this means: roundedLookup = (lookup * texSize) * invTexSize + half invTexSize
         vec3 roundedLookup = floor(lookup * textureSize.x) * textureSize.y + textureSize.z;
 
         if (lookupMode == 1) {
@@ -286,13 +287,15 @@ vec4 trace(vec3 origin, vec3 dir) {
             Box childBox = {cell.boxStart, cell.boxEnd};
             vec2 childBoxIntersection = intersectBox(lookup, dir, childBox);
             lookup += dir * childBoxIntersection.y * 1.0001; // smaller value = thicker black lines :D
+//            lookup += dir * lookupDist; // Larger steps further from the camera
         }
         else if (lookupMode == 2) {
             // Use this instead to look at the 3d volume texture directly
             cell.data = texture(voxelTexture, roundedLookup);
-            lookupDist *= 1.05;
+
             lookup += dir * lookupDist; // Larger steps further from the camera
         }
+        lookupDist *= 1.05;
 //        else {
 //            // Use this instead to look up a color and use it as a lookup
 //            vec3 lookup2 = texture(voxelTexture, lookup).rgb;
@@ -301,7 +304,7 @@ vec4 trace(vec3 origin, vec3 dir) {
 
         // If it's not and empty cell, return its color
         if (cell.data.w != 0)
-            return cell.data;
+            return vec4(cell.data.rgb / float((i + 4) / 16.0), cell.data.a);
 
 //        lookupDist *= 1.01;
 //        lookup += dir * lookupDist; // Larger steps further from the camera
@@ -381,12 +384,31 @@ void main(void) {
    * The result is a computed color which we will write at the work
    * item's framebuffer pixel.
    */
-  vec4 color = trace(eye, normalize(dir));
+
+    // Brute force depth of field
+//   vec3 focalPoint = eye + normalize(dir) * 0.2;
+//   float aperature = 0.01;
+//   float numSamples = 8;
+//   float invNumSamples = 1 / numSamples;
+//   vec4 color = vec4(0); // trace(eye, normalize(dir));
+//   for (int i = 0; i < numSamples; i++) {
+//        vec3 iEye = eye + random(eye + i * dir) * aperature;
+//        vec3 iDir = normalize(focalPoint - iEye);
+//        color += trace(iEye, iDir) * invNumSamples;
+//   }
+
+   vec4 color = trace(eye, normalize(dir));
+
+
+
+//  color = mix(color, trace(eye + random(eye*1.1) * 0.001, normalize(dir)), 0.5);
 
     // Simple dithering effect, can maybe be used for shadows?
     // Or differentiating types of nodes?
-//  if (color.w < 0.6)
+  if (color.w < 0.6)
+       color.rgb = mix(color.rgb, vec3(0), vec3((px / 2) % 2 == ivec2(0)));
 //    color.rgb = mix(color.rgb, vec3(0), vec3(mod(vec2(px / 2), (length(eye) + 1)) <= vec2(0.01)));
+
 
 //    vec3 color = texture(voxelTexture, vec3(p, eye.x)).rgb;
 
