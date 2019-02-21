@@ -1,11 +1,14 @@
 # LWJGL Voxel Raycasting
 Raycasting voxels in LWJGL. End goal is some hands on experience with sparse voxel DAGs
 
-Current status: Fine tuning Sparse Voxel Octree implementation
 
 Based on:
 * [GPU Gems Chapter 37. Octree Textures on the GPU](https://developer.nvidia.com/gpugems/GPUGems2/gpugems2_chapter37.html)
 * [LWJGL ray tracing tutorial](https://github.com/LWJGL/lwjgl3-demos/blob/master/src/org/lwjgl/demo/opengl/raytracing/tutorial/Tutorial1.java)
+
+## Video demo
+[![Ray Casting Adventure](https://img.youtube.com/vi/Zje1os8DDPk/3.jpg)](https://www.youtube.com/watch?v=Zje1os8DDPk)
+
 
 ## Screenshots
 4x4x4 sphere attempt, first rays that were cast
